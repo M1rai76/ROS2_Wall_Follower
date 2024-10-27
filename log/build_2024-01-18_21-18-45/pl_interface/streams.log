@@ -1,0 +1,19 @@
+[0.274s] Invoking command in '/home/rsa/colcon_ws/build/pl_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/pl_interface -- -j2 -l2
+[0.335s] [35m[1mScanning dependencies of target pl_interface[0m
+[0.383s] [ 50%] [32mBuilding CXX object CMakeFiles/pl_interface.dir/src/pl_interface.cpp.o[0m
+[1.924s] [01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:[m[K In constructor ‘[01m[KPlInterface::PlInterface()[m[K’:
+[1.924s] [01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:31:11:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kbool (*)()[m[K’ to ‘[01m[Kbool (*)(term, pobj**)[m[K’ {aka ‘[01m[Kbool (*)(pobj*, pobj**)[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.924s]    31 |  new_pred([01;31m[Kpl_near_start[m[K, (char *) "near_start");
+[1.924s]       |           [01;31m[K^~~~~~~~~~~~~[m[K
+[1.924s]       |           [01;31m[K|[m[K
+[1.924s]       |           [01;31m[Kbool (*)()[m[K
+[1.924s] In file included from [01m[K/usr/local/include/iProlog/prolog.h:420[m[K,
+[1.924s]                  from [01m[K/home/rsa/colcon_ws/src/pl_interface/include/pl_interface/pl_interface.hpp:28[m[K,
+[1.924s]                  from [01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:3[m[K:
+[1.924s] [01m[K/usr/local/include/iProlog/pred.h:3:15:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kpobj* new_pred(bool (*)(term, pobj**), char*)[m[K’
+[1.924s]     3 | term new_pred([01;36m[Kbool (*)(term, term *)[m[K, char *);
+[1.924s]       |               [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.146s] make[2]: *** [CMakeFiles/pl_interface.dir/build.make:63: CMakeFiles/pl_interface.dir/src/pl_interface.cpp.o] Error 1
+[4.146s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pl_interface.dir/all] Error 2
+[4.147s] make: *** [Makefile:141: all] Error 2
+[4.150s] Invoked command in '/home/rsa/colcon_ws/build/pl_interface' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/pl_interface -- -j2 -l2

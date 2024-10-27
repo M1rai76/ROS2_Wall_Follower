@@ -1,0 +1,1 @@
+/home/rsa/colcon_ws/build/pl_interface/ament_cmake_core/pl_interfaceConfig-version.cmake

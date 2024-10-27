@@ -1,0 +1,14 @@
+[35m[1mScanning dependencies of target wall_follower[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:340:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_pose_norm[m[K’ was not declared in this scope; did you mean ‘[01m[Krobot_pose_[m[K’?
+  340 |   [01;31m[Krobot_pose_norm[m[K = normalize_angle(robot_pose_);
+      |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |   [32m[Krobot_pose_[m[K
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:341:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw_norm[m[K’ was not declared in this scope; did you mean ‘[01m[Kprev_yaw[m[K’?
+  341 |   [01;31m[Kprev_yaw_norm[m[K = normalize_angle(prev_yaw);
+      |   [01;31m[K^~~~~~~~~~~~~[m[K
+      |   [32m[Kprev_yaw[m[K
+make[2]: *** [CMakeFiles/wall_follower.dir/build.make:63: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/wall_follower.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

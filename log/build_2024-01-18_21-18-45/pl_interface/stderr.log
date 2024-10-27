@@ -1,0 +1,15 @@
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:[m[K In constructor ‘[01m[KPlInterface::PlInterface()[m[K’:
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:31:11:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kbool (*)()[m[K’ to ‘[01m[Kbool (*)(term, pobj**)[m[K’ {aka ‘[01m[Kbool (*)(pobj*, pobj**)[m[K’} [[01;31m[K-fpermissive[m[K]
+   31 |  new_pred([01;31m[Kpl_near_start[m[K, (char *) "near_start");
+      |           [01;31m[K^~~~~~~~~~~~~[m[K
+      |           [01;31m[K|[m[K
+      |           [01;31m[Kbool (*)()[m[K
+In file included from [01m[K/usr/local/include/iProlog/prolog.h:420[m[K,
+                 from [01m[K/home/rsa/colcon_ws/src/pl_interface/include/pl_interface/pl_interface.hpp:28[m[K,
+                 from [01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:3[m[K:
+[01m[K/usr/local/include/iProlog/pred.h:3:15:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kpobj* new_pred(bool (*)(term, pobj**), char*)[m[K’
+    3 | term new_pred([01;36m[Kbool (*)(term, term *)[m[K, char *);
+      |               [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/pl_interface.dir/build.make:63: CMakeFiles/pl_interface.dir/src/pl_interface.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pl_interface.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

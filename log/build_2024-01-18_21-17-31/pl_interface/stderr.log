@@ -1,0 +1,7 @@
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:[m[K In function ‘[01m[Kbool pl_near_start(term, pobj**)[m[K’:
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:186:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  186 | bool pl_near_start([01;35m[Kterm goal[m[K, term *frame)
+      |                    [01;35m[K~~~~~^~~~[m[K
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:186:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kframe[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  186 | bool pl_near_start(term goal, [01;35m[Kterm *frame[m[K)
+      |                               [01;35m[K~~~~~~^~~~~[m[K

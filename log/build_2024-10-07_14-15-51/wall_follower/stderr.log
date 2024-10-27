@@ -1,0 +1,7 @@
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:317:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krobot_pose_norm[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  317 |   double [01;35m[Krobot_pose_norm[m[K = normalize_angle(robot_pose_);
+      |          [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:318:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kprev_yaw_norm[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  318 |   double [01;35m[Kprev_yaw_norm[m[K = normalize_angle(prev_yaw);
+      |          [01;35m[K^~~~~~~~~~~~~[m[K

@@ -1,0 +1,16 @@
+[0.122s] Invoking command in '/home/rsa/colcon_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/wall_follower -- -j4 -l4
+[0.249s] [35m[1mScanning dependencies of target wall_follower[0m
+[0.425s] [ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[2.307s] [01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
+[2.307s] [01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:340:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_pose_norm[m[K’ was not declared in this scope; did you mean ‘[01m[Krobot_pose_[m[K’?
+[2.307s]   340 |   [01;31m[Krobot_pose_norm[m[K = normalize_angle(robot_pose_);
+[2.307s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.307s]       |   [32m[Krobot_pose_[m[K
+[2.311s] [01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:341:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_yaw_norm[m[K’ was not declared in this scope; did you mean ‘[01m[Kprev_yaw[m[K’?
+[2.311s]   341 |   [01;31m[Kprev_yaw_norm[m[K = normalize_angle(prev_yaw);
+[2.312s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[2.312s]       |   [32m[Kprev_yaw[m[K
+[4.031s] make[2]: *** [CMakeFiles/wall_follower.dir/build.make:63: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
+[4.034s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/wall_follower.dir/all] Error 2
+[4.035s] make: *** [Makefile:141: all] Error 2
+[4.035s] Invoked command in '/home/rsa/colcon_ws/build/wall_follower' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/wall_follower -- -j4 -l4
