@@ -1,3 +1,45 @@
-Terminal 1: ros2 launch turtlebot3_gazebo turtlebot3_maze.launch.py
-Terminal 2: ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
-Terminal 3: ros2 launch wall_follower wall_follower.launch.py
+# ROS2 Wall Follower
+
+This project implements a wall-following and mapping solution for the TurtleBot3 Waffle Pi using ROS2. The robot explores an unknown maze, builds a map of the environment, and returns to its starting position, all without human intervention.
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deliverables](#deliverables)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Project Overview
+The goal of this project is to develop a ROS2 package that allows a TurtleBot3 Waffle Pi to:
+- Explore a maze using a wall-following behavior.
+- Build a map of the maze as it navigates.
+- Plot the path taken by the robot during exploration.
+- Automatically return to its starting location upon completing the maze.
+
+The project was developed as part of the COMP3431: Robot Software Architecture course at UNSW, focusing on building robot software and working with ROS2.
+
+## Features
+- **Wall-Following Behavior**: Uses a custom C++ or Python node to enable the robot to follow either the left or right wall.
+- **SLAM Mapping**: Integrates Cartographer for simultaneous localization and mapping (SLAM) to build an accurate map of the environment.
+- **Path Visualization**: Publishes the robot's path and the generated map to RViz for real-time visualization.
+- **Autonomous Navigation**: After the initial command to start, the robot explores and maps the environment without further input.
+
+## Requirements
+- **Hardware**: 
+  - TurtleBot3 Waffle Pi.
+  - Computer with ROS2 installed (Foxy).
+- **Software**:
+  - ROS2 Foxy.
+  - RViz2 for visualization.
+  - Cartographer for mapping.
+  - Python 3.x or C++.
+
+## Installation
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/M1rai76/ROS2_Wall_Follower.git
+   cd ROS2_Wall_Follower
