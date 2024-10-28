@@ -46,6 +46,7 @@ set(dependencies
 set(EXEC_NAME "wall_follower")
 
 add_executable(${EXEC_NAME} src/wall_follower.cpp)
+add_executable(${EXEC_NAME} src/marker_navigator.py)
 ament_target_dependencies(${EXEC_NAME} ${dependencies})
 
 ################################################################################
