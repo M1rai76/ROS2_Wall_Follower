@@ -150,18 +150,18 @@ void WallFollower::scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr ms
 			closest = msg->ranges.at(angle);
 	scan_data_[0] = closest;
 
-	// int beam_width_var = 10;
+	int beam_width_var = 10;
 	for (int i = 1; i < 12; i++)
 	{	
-		// // if FRONT_RIGHT, then beam width is 15
-		// if (i == 11){
-		// 	beam_width_var = 15;
-		// } else {
-		// 	beam_width_var = 10;
-		// }
+		// if FRONT_RIGHT, then beam width is 15
+		if (i == 11){
+			beam_width_var = 15;
+		} else {
+			beam_width_var = 10;
+		}
 
 		closest = msg->range_max;
-		for (int angle = scan_angle[i]-BEAM_WIDTH; angle < scan_angle[i]+BEAM_WIDTH; angle++)
+		for (int angle = scan_angle[i]-beam_width_var; angle < scan_angle[i]+beam_width_var; angle++)
 			if (msg->ranges.at(angle) == 0)
 				continue;
 			else if (msg->ranges.at(angle) < closest)
@@ -289,13 +289,12 @@ void WallFollower::update_callback()
 		//// DECISION MAKING CODE ///
 		/////////////////////////////
 
-		// if (near_start) {
-		// 	update_cmd_vel(0.0, 0.0);
+		if (near_start) {
+			update_cmd_vel(0.0, 0.0);
 
-		// 	std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
-		// 	RCLCPP_INFO(this->get_logger(), print1);
-		// } else
-		if (scan_data_[LEFT] > 0.8 && scan_data_[FRONT_LEFT] > 0.6) {
+			std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
+			RCLCPP_INFO(this->get_logger(), print1);
+		} else if (scan_data_[LEFT] > 0.8 && scan_data_[FRONT_LEFT] > 0.6) {
 			// does the FRONT_LEFT clause cause it to over turn sometimes, as it keeps going forward
 			// till it finds that high value?
 			prev_yaw = robot_pose_;
