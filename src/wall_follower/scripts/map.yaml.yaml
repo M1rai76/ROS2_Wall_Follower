@@ -1,4 +1,4 @@
-image: /home/rsa/colcon_ws/src/wall_follower/src/map.yaml.pgm
+image: /home/rsa/colcon_ws/src/wall_follower/scripts/map.yaml.pgm
 mode: trinary
 resolution: 0.05
 origin: [-3.39, -9.74, 0]

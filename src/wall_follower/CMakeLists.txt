@@ -46,7 +46,6 @@ set(dependencies
 set(EXEC_NAME "wall_follower")
 
 add_executable(${EXEC_NAME} src/wall_follower.cpp)
-add_executable(${EXEC_NAME} src/marker_navigator.py)
 ament_target_dependencies(${EXEC_NAME} ${dependencies})
 
 ################################################################################
@@ -70,6 +69,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/see_marker.py
   scripts/point_transformer.py
+  scripts/marker_navigator.py)
   DESTINATION lib/${PROJECT_NAME}
 )
 
