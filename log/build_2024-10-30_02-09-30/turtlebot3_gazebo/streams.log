@@ -1,0 +1,368 @@
+[0.036s] Invoking command in '/home/rsa/colcon_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/rsa/colcon_ws/src/turtlebot3_simulations/turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/rsa/colcon_ws/install/turtlebot3_gazebo
+[0.172s] -- The C compiler identification is GNU 9.4.0
+[0.233s] -- The CXX compiler identification is GNU 9.4.0
+[0.243s] -- Check for working C compiler: /usr/bin/cc
+[0.333s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.335s] -- Detecting C compiler ABI info
+[0.426s] -- Detecting C compiler ABI info - done
+[0.442s] -- Detecting C compile features
+[0.442s] -- Detecting C compile features - done
+[0.445s] -- Check for working CXX compiler: /usr/bin/c++
+[0.562s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.564s] -- Detecting CXX compiler ABI info
+[0.677s] -- Detecting CXX compiler ABI info - done
+[0.687s] -- Detecting CXX compile features
+[0.687s] -- Detecting CXX compile features - done
+[0.690s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.715s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.715s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.924s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+[0.930s] -- Checking for module 'bullet>=2.82'
+[0.956s] --   Found bullet, version 2.88
+[1.163s] -- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") 
+[1.288s] -- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") 
+[1.435s] -- Found assimp: /usr/include (found version "5.0.0") 
+[1.512s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[2.049s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[2.106s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+[2.121s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.145s] -- Searching for dependencies of ignition-math6
+[2.153s] -- Looking for OGRE...
+[2.153s] -- OGRE_PREFIX_WATCH changed.
+[2.160s] -- Checking for module 'OGRE'
+[2.188s] --   Found OGRE, version 1.9.0
+[2.263s] -- Found Ogre Ghadamon (1.9.0)
+[2.273s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[2.282s] -- Looking for OGRE_Paging...
+[2.290s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[2.291s] -- Looking for OGRE_Terrain...
+[2.299s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[2.299s] -- Looking for OGRE_Property...
+[2.306s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[2.306s] -- Looking for OGRE_RTShaderSystem...
+[2.313s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[2.313s] -- Looking for OGRE_Volume...
+[2.321s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[2.321s] -- Looking for OGRE_Overlay...
+[2.328s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[2.459s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.467s] -- Looking for ignition-transport8 -- found version 8.3.0
+[2.468s] -- Searching for dependencies of ignition-transport8
+[2.492s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") 
+[2.507s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[2.515s] -- Checking for module 'libzmq >= 4'
+[2.545s] --   Found libzmq , version 4.3.2
+[2.620s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[2.631s] -- Checking for module 'uuid'
+[2.659s] --   Found uuid, version 2.34.0
+[2.742s] -- Found UUID: TRUE  
+[2.747s] -- Looking for ignition-msgs5 -- found version 5.10.0
+[2.748s] -- Searching for dependencies of ignition-msgs5
+[2.782s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.789s] -- Checking for module 'tinyxml2'
+[2.816s] --   Found tinyxml2, version 6.2.0
+[2.900s] -- Looking for ignition-msgs5 -- found version 5.10.0
+[2.906s] -- Looking for ignition-common3 -- found version 3.14.2
+[2.907s] -- Searching for dependencies of ignition-common3
+[2.908s] -- Looking for dlfcn.h - found
+[2.909s] -- Looking for libdl - found
+[2.911s] -- Found DL: TRUE  
+[2.926s] -- Searching for <ignition-common3> component [graphics]
+[2.929s] -- Looking for ignition-common3-graphics -- found version 3.14.2
+[2.930s] -- Searching for dependencies of ignition-common3-graphics
+[2.930s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.938s] -- Looking for ignition-fuel_tools4 -- found version 4.6.0
+[2.938s] -- Searching for dependencies of ignition-fuel_tools4
+[3.081s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
+[3.097s] -- Checking for module 'jsoncpp'
+[3.124s] --   Found jsoncpp, version 1.7.4
+[3.205s] -- Found JSONCPP: TRUE  
+[3.217s] -- Checking for module 'libzip'
+[3.251s] --   Found libzip, version 1.5.1
+[3.330s] -- Found ZIP: TRUE  
+[3.331s] -- Looking for ignition-common3 -- found version 3.14.2
+[3.331s] -- Looking for ignition-math6 -- found version 6.15.1
+[3.331s] -- Looking for ignition-msgs5 -- found version 5.10.0
+[3.335s] -- Found gazebo_ros_pkgs: 3.5.3 (/opt/ros/foxy/share/gazebo_ros_pkgs/cmake)
+[3.337s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[3.362s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.368s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.512s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[3.544s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.638s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.711s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[3.776s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[3.819s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.820s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.823s] -- Found Threads: TRUE  
+[3.949s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[4.013s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[4.166s] -- Configuring done
+[4.279s] -- Generating done
+[4.284s] -- Build files have been written to: /home/rsa/colcon_ws/build/turtlebot3_gazebo
+[4.304s] Invoked command in '/home/rsa/colcon_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/rsa/colcon_ws/src/turtlebot3_simulations/turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/rsa/colcon_ws/install/turtlebot3_gazebo
+[4.305s] Invoking command in '/home/rsa/colcon_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/turtlebot3_gazebo -- -j4 -l4
+[4.390s] [35m[1mScanning dependencies of target turtlebot3_drive[0m
+[4.401s] [35m[1mScanning dependencies of target obstacle2[0m
+[4.430s] [35m[1mScanning dependencies of target obstacles[0m
+[4.463s] [35m[1mScanning dependencies of target obstacle1[0m
+[4.535s] [ 12%] [32mBuilding CXX object CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o[0m
+[5.217s] [ 25%] [32mBuilding CXX object CMakeFiles/obstacle1.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacle1.cc.o[0m
+[5.284s] [ 37%] [32mBuilding CXX object CMakeFiles/obstacle2.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacle2.cc.o[0m
+[5.308s] [ 50%] [32mBuilding CXX object CMakeFiles/obstacles.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacles.cc.o[0m
+[17.616s] [ 62%] [32m[1mLinking CXX executable turtlebot3_drive[0m
+[18.019s] [ 62%] Built target turtlebot3_drive
+[24.478s] [ 75%] [32m[1mLinking CXX shared library libobstacle1.so[0m
+[24.605s] [ 87%] [32m[1mLinking CXX shared library libobstacle2.so[0m
+[25.238s] [ 87%] Built target obstacle1
+[25.265s] [ 87%] Built target obstacle2
+[25.400s] [100%] [32m[1mLinking CXX shared library libobstacles.so[0m
+[25.684s] [100%] Built target obstacles
+[25.704s] Invoked command in '/home/rsa/colcon_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/turtlebot3_gazebo -- -j4 -l4
+[25.778s] Invoking command in '/home/rsa/colcon_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/rsa/colcon_ws/build/turtlebot3_gazebo
+[25.789s] -- Install configuration: ""
+[25.789s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/lib/turtlebot3_gazebo/turtlebot3_drive
+[25.794s] -- Set runtime path of "/home/rsa/colcon_ws/install/turtlebot3_gazebo/lib/turtlebot3_gazebo/turtlebot3_drive" to ""
+[25.794s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch
+[25.795s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_house.launch.py
+[25.804s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_maze.launch.py
+[25.805s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_autorace.launch.py
+[25.807s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/empty_world.launch.py
+[25.807s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage2.launch.py
+[25.808s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/robot_state_publisher.launch.py
+[25.809s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage3.launch.py
+[25.810s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage1.launch.py
+[25.811s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_world.launch.py
+[25.812s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage4.launch.py
+[25.813s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models
+[25.813s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/enclosure
+[25.813s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/enclosure/model.sdf~
+[25.815s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/enclosure/model.config
+[25.816s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/enclosure/model.sdf
+[25.817s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world
+[25.817s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model-1_4.sdf
+[25.818s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model.config
+[25.819s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes
+[25.819s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes/hexagon.dae
+[25.820s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes/wall.dae
+[25.821s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model.sdf
+[25.822s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/blue_on_pink_marker
+[25.822s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/blue_on_pink_marker/model.sdf~
+[25.822s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/blue_on_pink_marker/model.config
+[25.823s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/blue_on_pink_marker/model.sdf
+[25.824s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger
+[25.824s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model-1_4.sdf
+[25.825s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model.config
+[25.826s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/meshes
+[25.826s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/meshes/tire.dae
+[25.828s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/meshes/lds.dae
+[25.830s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/meshes/burger_base.dae
+[25.830s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model.sdf
+[25.831s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/green_on_pink_marker
+[25.831s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/green_on_pink_marker/model.sdf~
+[25.832s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/green_on_pink_marker/model.config
+[25.833s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/green_on_pink_marker/model.sdf
+[25.833s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_yellow_marker
+[25.834s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_yellow_marker/model.sdf~
+[25.835s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_yellow_marker/model.config
+[25.835s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_yellow_marker/model.sdf
+[25.836s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi
+[25.836s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model-1_4_.sdf
+[25.837s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model.config
+[25.837s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/meshes
+[25.837s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/meshes/waffle_pi_base.dae
+[25.839s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/meshes/tire.dae
+[25.840s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/meshes/lds.dae
+[25.841s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model.sdf
+[25.842s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle
+[25.842s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model-1_4.sdf
+[25.843s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model.config
+[25.844s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes
+[25.844s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes/r200.dae
+[25.847s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes/waffle_base.dae
+[25.848s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes/tire.dae
+[25.849s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/meshes/lds.dae
+[25.851s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model.sdf
+[25.851s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house
+[25.852s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house/model.config
+[25.852s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house/model.sdf
+[25.855s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/maze2
+[25.855s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/maze2/model.config
+[25.856s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/maze2/model.sdf
+[25.857s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/yellow_on_pink_marker
+[25.857s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/yellow_on_pink_marker/model.sdf~
+[25.858s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/yellow_on_pink_marker/model.config
+[25.859s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/yellow_on_pink_marker/model.sdf
+[25.859s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace
+[25.860s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course
+[25.860s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials
+[25.860s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials/textures
+[25.860s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials/textures/course.png
+[25.863s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials/scripts
+[25.863s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/materials/scripts/course.material
+[25.864s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/model.config
+[25.865s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/course/model.sdf
+[25.866s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking
+[25.866s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials
+[25.867s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials/textures
+[25.867s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials/textures/traffic_parking.png
+[25.868s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials/scripts
+[25.869s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/materials/scripts/traffic_parking.material
+[25.870s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/model.config
+[25.870s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_parking/model.sdf
+[25.872s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_obstacles
+[25.872s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_obstacles/model.config
+[25.872s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_obstacles/model.sdf
+[25.873s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down
+[25.873s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials
+[25.874s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials/textures
+[25.874s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials/textures/traffic_bar.png
+[25.875s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials/scripts
+[25.875s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/materials/scripts/traffic_bar.material
+[25.876s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/model.config
+[25.876s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_down/model.sdf
+[25.878s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_green
+[25.879s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_green/model.config
+[25.879s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_green/model.sdf
+[25.880s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop
+[25.881s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials
+[25.881s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials/textures
+[25.881s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials/textures/traffic_stop.png
+[25.882s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials/scripts
+[25.882s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/materials/scripts/traffic_stop.material
+[25.885s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/model.config
+[25.886s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_stop/model.sdf
+[25.886s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_red
+[25.887s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_red/model.config
+[25.887s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_red/model.sdf
+[25.888s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/lights
+[25.888s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/lights/model.config
+[25.889s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/lights/model.sdf
+[25.889s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_yellow
+[25.890s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_yellow/model.config
+[25.891s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_light_yellow/model.sdf
+[25.892s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up
+[25.892s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials
+[25.893s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials/textures
+[25.893s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials/textures/traffic_bar.png
+[25.894s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials/scripts
+[25.894s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/materials/scripts/traffic_bar.material
+[25.895s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/model.config
+[25.896s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_bar_up/model.sdf
+[25.897s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/model.config
+[25.897s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/ground
+[25.898s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/ground/model.config
+[25.899s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/ground/model.sdf
+[25.901s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_wall
+[25.901s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_wall/model.config
+[25.901s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/tunnel_wall/model.sdf
+[25.902s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel
+[25.903s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials
+[25.903s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials/textures
+[25.903s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials/textures/tunnel.png
+[25.904s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials/scripts
+[25.904s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/materials/scripts/tunnel.material
+[25.905s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/model.config
+[25.905s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace/traffic_tunnel/model.sdf
+[25.907s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_green_marker
+[25.907s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_green_marker/model.sdf~
+[25.908s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_green_marker/model.config
+[25.909s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_green_marker/model.sdf
+[25.910s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_blue_marker
+[25.910s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_blue_marker/model.sdf~
+[25.910s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_blue_marker/model.config
+[25.911s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/pink_on_blue_marker/model.sdf
+[25.912s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world
+[25.912s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls
+[25.912s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls/model.config
+[25.913s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls/model.sdf
+[25.913s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1
+[25.914s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1/model.config
+[25.915s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1/model.sdf
+[25.915s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin
+[25.915s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacles.cc
+[25.915s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacle1.cc
+[25.916s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/CMakeLists.txt
+[25.917s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin/obstacle2.cc
+[25.917s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box
+[25.917s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box/model.config
+[25.917s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box/model.sdf
+[25.919s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles
+[25.919s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles/model.config
+[25.920s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles/model.sdf
+[25.920s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2
+[25.920s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2/model.config
+[25.921s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2/model.sdf
+[25.922s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/model.config
+[25.923s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/model.sdf
+[25.923s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/wall_section
+[25.923s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/wall_section/model.sdf~
+[25.924s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/wall_section/model.config
+[25.925s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/wall_section/model.sdf
+[25.925s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_maze
+[25.926s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_maze/model.sdf~
+[25.927s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_maze/model.config
+[25.927s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_maze/model (copy 1).sdf
+[25.929s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_maze/model.sdf
+[25.931s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//rviz
+[25.931s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//rviz/tb3_gazebo.rviz
+[25.932s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds
+[25.932s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_houses
+[25.932s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_houses/waffle_pi.model
+[25.933s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_houses/waffle.model
+[25.934s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_houses/burger.model
+[25.935s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/params.txt
+[25.936s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_worlds
+[25.936s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_worlds/waffle_pi.model
+[25.937s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_worlds/waffle.model
+[25.938s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_worlds/burger.model
+[25.938s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autoraces
+[25.939s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autoraces/waffle_pi.model
+[25.940s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autoraces/waffle.model
+[25.941s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_autoraces/burger.model
+[25.941s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_worlds
+[25.942s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_worlds/waffle_pi.model
+[25.943s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_worlds/waffle.model
+[25.943s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_worlds/burger.model
+[25.944s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_mazes
+[25.944s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_mazes/waffle_pi.model
+[25.945s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_mazes/waffle_pi.model~
+[25.946s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_mazes/waffle.model
+[25.947s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_mazes/burger.model
+[25.948s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4
+[25.948s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4/waffle_pi.model
+[25.950s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4/waffle.model
+[25.951s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage4/burger.model
+[25.951s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1
+[25.951s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1/waffle_pi.model
+[25.953s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1/waffle.model
+[25.953s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1/burger.model
+[25.955s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2
+[25.955s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2/waffle_pi.model
+[25.956s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2/waffle.model
+[25.956s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2/burger.model
+[25.958s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3
+[25.958s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3/waffle_pi.model
+[25.958s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3/waffle.model
+[25.959s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3/burger.model
+[25.960s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/include/
+[25.960s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/include//turtlebot3_gazebo
+[25.960s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/include//turtlebot3_gazebo/turtlebot3_drive.hpp
+[25.961s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/ament_index/resource_index/package_run_dependencies/turtlebot3_gazebo
+[25.961s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/ament_index/resource_index/parent_prefix_path/turtlebot3_gazebo
+[25.964s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/ament_prefix_path.sh
+[25.964s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/ament_prefix_path.dsv
+[25.964s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/path.sh
+[25.964s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/path.dsv
+[25.964s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.bash
+[25.964s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.sh
+[25.964s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.zsh
+[25.964s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.dsv
+[25.965s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.dsv
+[25.965s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/ament_index/resource_index/packages/turtlebot3_gazebo
+[25.965s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/ament_cmake_export_include_directories-extras.cmake
+[25.966s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/ament_cmake_export_dependencies-extras.cmake
+[25.966s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig.cmake
+[25.966s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig-version.cmake
+[25.966s] -- Installing: /home/rsa/colcon_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.xml
+[25.972s] Invoked command in '/home/rsa/colcon_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/rsa/colcon_ws/build/turtlebot3_gazebo
