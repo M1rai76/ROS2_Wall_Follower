@@ -328,8 +328,8 @@ ament_cmake_symlink_install_files("/home/rsa/colcon_ws/src/wall_follower" FILES 
 # install(DIRECTORY "/home/rsa/colcon_ws/src/wall_follower/wall_follower/" "DESTINATION" "lib/python3.8/site-packages/wall_follower" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 ament_cmake_symlink_install_directory("/home/rsa/colcon_ws/src/wall_follower" DIRECTORY "/home/rsa/colcon_ws/src/wall_follower/wall_follower/" "DESTINATION" "lib/python3.8/site-packages/wall_follower" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install(PROGRAMS "scripts/see_marker.py" "scripts/point_transformer.py" "DESTINATION" "lib/wall_follower")
-ament_cmake_symlink_install_programs("/home/rsa/colcon_ws/src/wall_follower" PROGRAMS "scripts/see_marker.py" "scripts/point_transformer.py" "DESTINATION" "lib/wall_follower")
+# install(PROGRAMS "scripts/see_marker.py" "scripts/point_transformer.py" "scripts/marker_navigator.py" "DESTINATION" "lib/wall_follower")
+ament_cmake_symlink_install_programs("/home/rsa/colcon_ws/src/wall_follower" PROGRAMS "scripts/see_marker.py" "scripts/point_transformer.py" "scripts/marker_navigator.py" "DESTINATION" "lib/wall_follower")
 
 # install(FILES "/home/rsa/colcon_ws/build/wall_follower/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/wall_follower" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/rsa/colcon_ws/src/wall_follower" FILES "/home/rsa/colcon_ws/build/wall_follower/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/wall_follower" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

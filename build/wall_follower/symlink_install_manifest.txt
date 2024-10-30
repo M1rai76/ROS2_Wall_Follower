@@ -8,6 +8,7 @@
 /home/rsa/colcon_ws/install/wall_follower/lib/python3.8/site-packages/wall_follower/landmark.py
 /home/rsa/colcon_ws/install/wall_follower/lib/wall_follower/see_marker.py
 /home/rsa/colcon_ws/install/wall_follower/lib/wall_follower/point_transformer.py
+/home/rsa/colcon_ws/install/wall_follower/lib/wall_follower/marker_navigator.py
 /home/rsa/colcon_ws/install/wall_follower/share/ament_index/resource_index/package_run_dependencies/wall_follower
 /home/rsa/colcon_ws/install/wall_follower/share/ament_index/resource_index/parent_prefix_path/wall_follower
 /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/environment/ament_prefix_path.sh

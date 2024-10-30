@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 import csv
-from geometrymsgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped
 from nav2_simple_commander.robot_navigator import BasicNavigator
 
 class MarkerNavigator(Node):
