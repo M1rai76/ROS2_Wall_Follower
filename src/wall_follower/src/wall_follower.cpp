@@ -35,6 +35,7 @@ WallFollower::WallFollower()
 
    robot_pose_ = 0.0;
    near_start = false;
+   first_bool = false;
 
    // Turning Variables
    turning_left = false;
@@ -112,7 +113,7 @@ void WallFollower::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 		start_y = current_y;
 		first = false;
 		// TODO check path
-		std::ofstream file("positions.csv", std::ios::trunc);
+		std::ofstream file("/home/comp3431/colcon_ws/src/wall_follower/scripts/positions.csv", std::ios::trunc);
 		// // safety check
 		if (!file) {
 		    std::string print = "File does not exist\n";
@@ -190,6 +191,17 @@ void WallFollower::update_cmd_vel(double linear, double angular)
 
 
    cmd_vel_pub_->publish(cmd_vel);
+}
+
+void WallFollower::update_nav()
+{	
+	if (first_bool == false){
+		first_bool = true;
+		std_msgs::msg::Bool nav_complete_msg;
+		nav_complete_msg.data = true;
+		
+		nav_complete_pub_->publish(nav_complete_msg);
+	}
 }
 
 
@@ -300,13 +312,18 @@ void WallFollower::update_callback()
 		//// DECISION MAKING CODE ///
 		/////////////////////////////
 
-		// if (near_start) {
-		// 	update_cmd_vel(0.0, 0.0);
+		if (near_start) {
+			update_cmd_vel(0.0, 0.2);
+			
+			std::string print1 = "Sending Bool";
+			RCLCPP_INFO(this->get_logger(), print1);
+			
+			update_nav();
 
-		// 	std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
-		// 	RCLCPP_INFO(this->get_logger(), print1);
-		// } else
-		if (scan_data_[LEFT] > 0.8 && scan_data_[FRONT_LEFT] > 0.6) {
+			print1 = "NEAR_START (shouldn't be doing anything)\n";
+			RCLCPP_INFO(this->get_logger(), print1);
+		
+		} else if (scan_data_[LEFT] > 0.65) {
 			// does the FRONT_LEFT clause cause it to over turn sometimes, as it keeps going forward
 			// till it finds that high value?
 			prev_yaw = robot_pose_;

@@ -24,11 +24,11 @@ class PointTransformer(Node):
 		self.tf_buffer = tf2_ros.Buffer()
 		self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 		self.point_subscriber = self.create_subscription(PointStamped, '/marker_position', self.point_callback, 10)
-		self.nav_complete_sub = self.create_subscription(Bool, 'nav_complete', self.nav_complete_callback, 10)
+		self.nav_complete_sub = self.create_subscription(Bool, '/nav_complete', self.nav_complete_callback, 10)
 		self.marker_publisher_ = self.create_publisher(MarkerArray, 'visualization_marker_array', 10)
 
 		self.marker_position = []
-		self.marker_array = MarkerArray()			
+		self.marker_array = MarkerArray()		
 		self.marker_array.markers = []
 
 		for i in range(max_markers):
@@ -36,12 +36,17 @@ class PointTransformer(Node):
 
 
 	def point_callback(self, msg):
+		self.get_logger().info(f"In point_callback!")
 		try:
 			# Lookup the transform from the camera_rgb_optical_frame to the map frame
 			transform = self.tf_buffer.lookup_transform('map', msg.header.frame_id, rclpy.time.Time())
 		except tf2_ros.LookupException as e:
 			self.get_logger().error('Transform lookup failed: %s' % str(e))
 			return
+		except tf2_ros.ExtrapolationException as e:
+			self.get_logger().error('Extrapolation failed: %s' % str(e))
+			return
+		
 
 		which_marker = int(msg.point.z)
 		m = marker_type[which_marker]
@@ -54,23 +59,50 @@ class PointTransformer(Node):
 		# self.get_logger().info(f'Mapped {m} marker to /map frame: x={map_point.point.x}, y={map_point.point.y}, z={map_point.point.z}')
 
 		self.marker_position[which_marker].update_position(map_point.point)
+		self.get_logger().info('after update \n')
+		for i in self.marker_position:
+			self.get_logger().info('{i}')
+
 		self.marker_publisher_.publish(self.marker_array)
 
 
 	def nav_complete_callback(self, msg):
+		self.get_logger().info(f"Boolean value passed is {msg.data}")
 		if msg.data:
+			self.get_logger().info(f"Calling save function\n")
 			self.save_marker_positions()
+			self.get_logger().info(f"Returned from save function\n")
 
 
 	def save_marker_positions(self):
-		csv_file_path = "positions.csv"
+		csv_file_path = "/home/comp3431/colcon_ws/src/wall_follower/scripts/positions.csv"
+		self.get_logger().info(f"Inside save function\n")
+		
+		
 		with open(csv_file_path, mode='a', newline='') as csv_file:
+			self.get_logger().info(f"File opened\n")
 			writer = csv.writer(csv_file)
+			
+			self.get_logger().info(f"Writer works\n")
+			
 			for i, landmark in enumerate(self.marker_position):
-				x = landmark.top_marker.pose.position.x
-				y = landmark.top_marker.pose.position.y
-				writer.writerow([x, y, marker_type[i]])
-		self.get_logger().info(f"Marker positions saved to {csv_file_path}")
+				self.get_logger().info(f"Executing for loop\n")
+				try:
+					x = landmark.top_marker.pose.position.x
+					y = landmark.top_marker.pose.position.y
+					self.get_logger().info(f"x value {x}\n")
+					self.get_logger().info(f"y value {y}\n")
+
+					writer.writerow([x, y, marker_type[i]])
+				except:
+					self.get_logger().info(f"Marker is none\n")
+			
+			
+			# for i, landmark in enumerate(self.marker_position):
+			# 	x = landmark.top_marker.pose.position.x
+			# 	y = landmark.top_marker.pose.position.y
+			# 	
+			# 	self.get_logger().info(f"Single marker saved\n")
 
 
 def main(args=None):

@@ -23,6 +23,7 @@
 #include <sensor_msgs/msg/laser_scan.hpp>
 #include <tf2/LinearMath/Matrix3x3.h>
 #include <tf2/LinearMath/Quaternion.h>
+#include <std_msgs/msg/bool.hpp>
 
 #define DEG2RAD (M_PI / 180.0)
 #define RAD2DEG (180.0 / M_PI)
@@ -54,8 +55,8 @@ public:
 private:
    // ROS topic publishers
    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub_;
-
-
+   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr nav_complete_pub_;
+ 
    // ROS topic subscribers
    rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub_;
    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
@@ -65,6 +66,7 @@ private:
    double robot_pose_;
    double start_x, start_y;
    bool near_start; 
+   bool first_bool;
    double scan_data_[12];
    
    // bool first;
@@ -90,6 +92,7 @@ private:
 
    // Function prototypes
    void update_callback();
+   void update_nav();
    void update_cmd_vel(double linear, double angular);
    void scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg);
    void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
