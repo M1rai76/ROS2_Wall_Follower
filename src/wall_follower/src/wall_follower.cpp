@@ -303,18 +303,13 @@ void WallFollower::update_callback()
 		//// DECISION MAKING CODE ///
 		/////////////////////////////
 
-		if (near_start) {
-			update_cmd_vel(0.0, 0.0);
-			// publish this message
-                        // TODO: should wall follower shut down after this
-                //         std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
-                        std_msgs::msg::Bool nav_complete_msg;
-                        nav_complete_msg.data = true;
-                        nav_complete_pub_->publish(nav_complete_msg);
+		// if (near_start) {
+		// 	update_cmd_vel(0.0, 0.0);
 
-			std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
-			RCLCPP_INFO(this->get_logger(), print1);
-		} else if (scan_data_[LEFT] > 0.65) {
+		// 	std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
+		// 	RCLCPP_INFO(this->get_logger(), print1);
+		// } else
+		if (scan_data_[LEFT] > 0.8 && scan_data_[FRONT_LEFT] > 0.6) {
 			// does the FRONT_LEFT clause cause it to over turn sometimes, as it keeps going forward
 			// till it finds that high value?
 			prev_yaw = robot_pose_;

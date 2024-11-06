@@ -5,8 +5,8 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='wall_follower',
-            executable='marker_navigator.py',
-            name='marker_navigator',
-            output='screen'
-        )
+            executable='marker_navigator',  # Without .py
+            name='marker_navigator_node',
+            output='screen',
+        ),
     ])
