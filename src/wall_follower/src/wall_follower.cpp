@@ -20,6 +20,7 @@
 
 #include "wall_follower/wall_follower.hpp"
 #include <memory>
+#include <fstream>
 using namespace std::chrono_literals;
 
 
@@ -48,11 +49,13 @@ WallFollower::WallFollower()
    ** Initialise ROS publishers and subscribers
    ************************************************************/
    auto qos = rclcpp::QoS(rclcpp::KeepLast(10));
+   // add a new publisher for the navigation completion signal
+   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr nav_complete_pub_;
 
 
    // Initialise publishers
    cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", qos);
-
+   nav_complete_pub_ = this->create_publisher<std_msgs::msg::Bool>("nav_complete", qos);
 
    // Initialise subscribers
    scan_sub_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
@@ -111,6 +114,17 @@ void WallFollower::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 		start_x = current_x;
 		start_y = current_y;
 		first = false;
+		// TODO check path
+		std::ofstream file("positions.csv", std::ios::trunc);
+		// // safety check
+		if (!file) {
+		    std::string print = "File does not exist\n";
+			RCLCPP_INFO(this->get_logger(), print);
+		}
+		
+		// do these values need any formatting or typecasting?
+		file << start_x << "," << start_y << "," << yaw << "\n";
+		file.close();
 		fprintf(stderr, "This is first!!\n");
 	}
 	else if (within_start_range)
@@ -150,18 +164,18 @@ void WallFollower::scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr ms
 			closest = msg->ranges.at(angle);
 	scan_data_[0] = closest;
 
-	// int beam_width_var = 10;
+	int beam_width_var = 10;
 	for (int i = 1; i < 12; i++)
 	{	
-		// // if FRONT_RIGHT, then beam width is 15
-		// if (i == 11){
-		// 	beam_width_var = 15;
-		// } else {
-		// 	beam_width_var = 10;
-		// }
+		// if FRONT_RIGHT, then beam width is 15
+		if (i == 11){
+			beam_width_var = 15;
+		} else {
+			beam_width_var = 10;
+		}
 
 		closest = msg->range_max;
-		for (int angle = scan_angle[i]-BEAM_WIDTH; angle < scan_angle[i]+BEAM_WIDTH; angle++)
+		for (int angle = scan_angle[i]-beam_width_var; angle < scan_angle[i]+beam_width_var; angle++)
 			if (msg->ranges.at(angle) == 0)
 				continue;
 			else if (msg->ranges.at(angle) < closest)
@@ -289,13 +303,18 @@ void WallFollower::update_callback()
 		//// DECISION MAKING CODE ///
 		/////////////////////////////
 
-		// if (near_start) {
-		// 	update_cmd_vel(0.0, 0.0);
+		if (near_start) {
+			update_cmd_vel(0.0, 0.0);
+			// publish this message
+                        // TODO: should wall follower shut down after this
+                //         std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
+                        std_msgs::msg::Bool nav_complete_msg;
+                        nav_complete_msg.data = true;
+                        nav_complete_pub_->publish(nav_complete_msg);
 
-		// 	std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
-		// 	RCLCPP_INFO(this->get_logger(), print1);
-		// } else
-		if (scan_data_[LEFT] > 0.8 && scan_data_[FRONT_LEFT] > 0.6) {
+			std::string print1 = "NEAR_START (shouldn't be doing anything)\n";
+			RCLCPP_INFO(this->get_logger(), print1);
+		} else if (scan_data_[LEFT] > 0.65) {
 			// does the FRONT_LEFT clause cause it to over turn sometimes, as it keeps going forward
 			// till it finds that high value?
 			prev_yaw = robot_pose_;
@@ -328,7 +347,7 @@ void WallFollower::update_callback()
 			RCLCPP_INFO(this->get_logger(), print4);
 		
 		} else {
-			update_cmd_vel(0.2, 0.0);
+			update_cmd_vel(0.15, 0.0);
 
 			std::string print7 = "Here (should be JUST moving forward)\n";
 			RCLCPP_INFO(this->get_logger(), print7);
