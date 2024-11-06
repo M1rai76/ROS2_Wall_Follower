@@ -49,9 +49,6 @@ WallFollower::WallFollower()
    ** Initialise ROS publishers and subscribers
    ************************************************************/
    auto qos = rclcpp::QoS(rclcpp::KeepLast(10));
-   // add a new publisher for the navigation completion signal
-   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr nav_complete_pub_;
-
 
    // Initialise publishers
    cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", qos);
