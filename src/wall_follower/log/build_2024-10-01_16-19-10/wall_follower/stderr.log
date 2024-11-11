@@ -1,0 +1,22 @@
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::update_callback()[m[K’:
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:181:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  181 |   [01;31m[K}[m[K else {
+      |   [01;31m[K^[m[K
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:194:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  194 |   [01;31m[K}[m[K else {
+      |   [01;31m[K^[m[K
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:216:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kturning_left[m[K’
+  216 |    prev_yaw = robot_pose_
+      |                          [01;31m[K^[m[K
+      |                          [32m[K;[m[K
+  217 |    [32m[Kturning_left[m[K = true;
+      |    [32m[K~~~~~~~~~~~~[m[K           
+[01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:228:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kturning_right[m[K’
+  228 |    prev_yaw = robot_pose_
+      |                          [01;31m[K^[m[K
+      |                          [32m[K;[m[K
+  229 |    [32m[Kturning_right[m[K = true;
+      |    [32m[K~~~~~~~~~~~~~[m[K          
+make[2]: *** [CMakeFiles/wall_follower.dir/build.make:63: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/wall_follower.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

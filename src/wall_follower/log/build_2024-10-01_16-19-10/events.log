@@ -1,0 +1,231 @@
+[0.000000] (-) TimerEvent: {}
+[0.001629] (wall_follower) JobQueued: {'identifier': 'wall_follower', 'dependencies': OrderedDict()}
+[0.001865] (wall_follower) JobStarted: {'identifier': 'wall_follower'}
+[0.042408] (wall_follower) JobProgress: {'identifier': 'wall_follower', 'progress': 'cmake'}
+[0.042526] (wall_follower) Command: {'cmd': ['/usr/bin/cmake', '/home/rsa/colcon_ws/src/wall_follower', '-DCMAKE_INSTALL_PREFIX=/home/rsa/colcon_ws/src/wall_follower/install/wall_follower'], 'cwd': '/home/rsa/colcon_ws/src/wall_follower/build/wall_follower', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'rsa'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1106'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib/iProlog:'), ('HOME', '/home/rsa'), ('OLDPWD', '/home/rsa/colcon_ws/src'), ('DESKTOP_SESSION', 'xubuntu'), ('ROS_PYTHON_VERSION', '3'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/rsa/colcon_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'rsa'), ('WINDOWID', '39845891'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('CLUTTER_BACKEND', 'x11'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/opt/qulog/bin:/opt/qp10.8/bin:/home/rsa/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1023,unix/ubuntu:/tmp/.ICE-unix/1023'), ('GDM_LANG', 'en_US'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'xfce-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0.0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'XFCE'), ('XDG_SESSION_DESKTOP', 'xubuntu'), ('XAUTHORITY', '/home/rsa/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '4'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/rsa'), ('AMENT_PREFIX_PATH', '/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'xubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('XDG_VTNR', '7'), ('PWD', '/home/rsa/colcon_ws/src/wall_follower/build/wall_follower'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-xubuntu:/etc/xdg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/xubuntu:/usr/share/xfce4:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share'), ('PYTHONPATH', '/home/rsa/colcon_ws/install/wall_follower/lib/python3.8/site-packages:/home/rsa/colcon_ws/install/pl_interface/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy')]), 'shell': False}
+[0.097383] (-) TimerEvent: {}
+[0.205067] (-) TimerEvent: {}
+[0.313306] (-) TimerEvent: {}
+[0.414668] (-) TimerEvent: {}
+[0.537746] (-) TimerEvent: {}
+[0.639481] (-) TimerEvent: {}
+[0.742081] (-) TimerEvent: {}
+[0.856135] (-) TimerEvent: {}
+[0.974150] (-) TimerEvent: {}
+[1.077269] (-) TimerEvent: {}
+[1.179565] (-) TimerEvent: {}
+[1.281737] (-) TimerEvent: {}
+[1.386444] (-) TimerEvent: {}
+[1.494322] (-) TimerEvent: {}
+[1.598510] (-) TimerEvent: {}
+[1.714552] (-) TimerEvent: {}
+[1.822224] (-) TimerEvent: {}
+[1.926335] (-) TimerEvent: {}
+[2.025201] (wall_follower) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[2.028176] (-) TimerEvent: {}
+[2.129268] (-) TimerEvent: {}
+[2.230938] (-) TimerEvent: {}
+[2.350551] (-) TimerEvent: {}
+[2.459066] (-) TimerEvent: {}
+[2.560088] (-) TimerEvent: {}
+[2.678580] (-) TimerEvent: {}
+[2.793255] (-) TimerEvent: {}
+[2.812555] (wall_follower) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[2.896054] (-) TimerEvent: {}
+[2.984352] (wall_follower) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[2.997326] (-) TimerEvent: {}
+[3.098729] (-) TimerEvent: {}
+[3.208380] (-) TimerEvent: {}
+[3.322628] (-) TimerEvent: {}
+[3.338815] (wall_follower) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[3.386714] (wall_follower) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.423038] (-) TimerEvent: {}
+[3.523964] (-) TimerEvent: {}
+[3.586755] (wall_follower) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.620087] (wall_follower) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.624073] (wall_follower) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.624248] (-) TimerEvent: {}
+[3.682785] (wall_follower) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[3.724638] (-) TimerEvent: {}
+[3.835525] (-) TimerEvent: {}
+[3.841515] (wall_follower) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[3.842782] (wall_follower) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.957496] (-) TimerEvent: {}
+[4.062175] (-) TimerEvent: {}
+[4.179388] (-) TimerEvent: {}
+[4.200493] (wall_follower) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.211783] (wall_follower) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.235572] (wall_follower) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.290994] (-) TimerEvent: {}
+[4.413586] (-) TimerEvent: {}
+[4.528999] (-) TimerEvent: {}
+[4.546497] (wall_follower) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[4.633980] (-) TimerEvent: {}
+[4.650624] (wall_follower) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[4.650939] (wall_follower) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[4.741846] (-) TimerEvent: {}
+[4.857088] (-) TimerEvent: {}
+[4.982146] (-) TimerEvent: {}
+[5.084823] (-) TimerEvent: {}
+[5.186661] (-) TimerEvent: {}
+[5.288045] (-) TimerEvent: {}
+[5.365436] (wall_follower) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[5.400895] (-) TimerEvent: {}
+[5.502304] (-) TimerEvent: {}
+[5.604120] (-) TimerEvent: {}
+[5.705314] (-) TimerEvent: {}
+[5.806639] (-) TimerEvent: {}
+[5.907399] (-) TimerEvent: {}
+[5.994218] (wall_follower) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.014691] (-) TimerEvent: {}
+[6.123515] (-) TimerEvent: {}
+[6.132106] (wall_follower) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[6.226862] (-) TimerEvent: {}
+[6.338625] (-) TimerEvent: {}
+[6.440256] (-) TimerEvent: {}
+[6.541895] (-) TimerEvent: {}
+[6.645610] (-) TimerEvent: {}
+[6.756571] (-) TimerEvent: {}
+[6.846246] (wall_follower) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[6.873235] (-) TimerEvent: {}
+[6.923344] (wall_follower) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[6.973919] (-) TimerEvent: {}
+[7.074922] (-) TimerEvent: {}
+[7.178096] (-) TimerEvent: {}
+[7.245226] (wall_follower) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.279261] (-) TimerEvent: {}
+[7.381389] (-) TimerEvent: {}
+[7.482156] (-) TimerEvent: {}
+[7.496196] (wall_follower) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[7.516000] (wall_follower) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[7.524572] (wall_follower) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[7.582793] (-) TimerEvent: {}
+[7.696291] (-) TimerEvent: {}
+[7.704928] (wall_follower) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[7.705681] (wall_follower) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[7.798138] (-) TimerEvent: {}
+[7.904028] (-) TimerEvent: {}
+[7.941121] (wall_follower) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[7.941448] (wall_follower) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[8.006911] (-) TimerEvent: {}
+[8.116012] (-) TimerEvent: {}
+[8.144188] (wall_follower) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[8.144476] (wall_follower) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[8.221167] (-) TimerEvent: {}
+[8.341454] (wall_follower) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[8.342001] (-) TimerEvent: {}
+[8.342139] (wall_follower) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[8.449130] (-) TimerEvent: {}
+[8.560703] (-) TimerEvent: {}
+[8.665235] (-) TimerEvent: {}
+[8.766269] (-) TimerEvent: {}
+[8.869788] (-) TimerEvent: {}
+[8.988881] (-) TimerEvent: {}
+[8.995591] (wall_follower) StdoutLine: {'line': b'-- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)\n'}
+[9.022965] (wall_follower) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[9.089451] (-) TimerEvent: {}
+[9.136098] (wall_follower) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[9.190145] (-) TimerEvent: {}
+[9.263557] (wall_follower) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[9.291500] (-) TimerEvent: {}
+[9.392712] (-) TimerEvent: {}
+[9.493768] (-) TimerEvent: {}
+[9.559185] (wall_follower) StdoutLine: {'line': b'-- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)\n'}
+[9.600410] (-) TimerEvent: {}
+[9.708340] (-) TimerEvent: {}
+[9.809394] (-) TimerEvent: {}
+[9.830846] (wall_follower) StdoutLine: {'line': b'-- Configuring done\n'}
+[9.863561] (wall_follower) StdoutLine: {'line': b'-- Generating done\n'}
+[9.873632] (wall_follower) StdoutLine: {'line': b'-- Build files have been written to: /home/rsa/colcon_ws/src/wall_follower/build/wall_follower\n'}
+[9.933034] (wall_follower) CommandEnded: {'returncode': 0}
+[9.934375] (-) TimerEvent: {}
+[9.934742] (wall_follower) JobProgress: {'identifier': 'wall_follower', 'progress': 'build'}
+[9.934784] (wall_follower) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rsa/colcon_ws/src/wall_follower/build/wall_follower', '--', '-j4', '-l4'], 'cwd': '/home/rsa/colcon_ws/src/wall_follower/build/wall_follower', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'rsa'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1106'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/lib/iProlog:'), ('HOME', '/home/rsa'), ('OLDPWD', '/home/rsa/colcon_ws/src'), ('DESKTOP_SESSION', 'xubuntu'), ('ROS_PYTHON_VERSION', '3'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/rsa/colcon_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'rsa'), ('WINDOWID', '39845891'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('CLUTTER_BACKEND', 'x11'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/opt/qulog/bin:/opt/qp10.8/bin:/home/rsa/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1023,unix/ubuntu:/tmp/.ICE-unix/1023'), ('GDM_LANG', 'en_US'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'xfce-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0.0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'XFCE'), ('XDG_SESSION_DESKTOP', 'xubuntu'), ('XAUTHORITY', '/home/rsa/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '4'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/rsa'), ('AMENT_PREFIX_PATH', '/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'xubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('XDG_VTNR', '7'), ('PWD', '/home/rsa/colcon_ws/src/wall_follower/build/wall_follower'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-xubuntu:/etc/xdg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/xubuntu:/usr/share/xfce4:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share'), ('PYTHONPATH', '/home/rsa/colcon_ws/install/wall_follower/lib/python3.8/site-packages:/home/rsa/colcon_ws/install/pl_interface/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy')]), 'shell': False}
+[10.021290] (wall_follower) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target wall_follower\x1b[0m\n'}
+[10.035343] (-) TimerEvent: {}
+[10.158347] (-) TimerEvent: {}
+[10.264205] (-) TimerEvent: {}
+[10.366156] (-) TimerEvent: {}
+[10.466924] (-) TimerEvent: {}
+[10.572555] (-) TimerEvent: {}
+[10.673360] (-) TimerEvent: {}
+[10.793749] (-) TimerEvent: {}
+[10.928709] (-) TimerEvent: {}
+[11.044416] (-) TimerEvent: {}
+[11.176019] (-) TimerEvent: {}
+[11.280425] (-) TimerEvent: {}
+[11.381271] (-) TimerEvent: {}
+[11.482862] (-) TimerEvent: {}
+[11.490996] (wall_follower) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o\x1b[0m\n'}
+[11.583746] (-) TimerEvent: {}
+[11.696502] (-) TimerEvent: {}
+[11.797454] (-) TimerEvent: {}
+[11.901786] (-) TimerEvent: {}
+[12.022141] (-) TimerEvent: {}
+[12.138954] (-) TimerEvent: {}
+[12.242996] (-) TimerEvent: {}
+[12.343768] (-) TimerEvent: {}
+[12.525358] (-) TimerEvent: {}
+[12.632505] (-) TimerEvent: {}
+[12.753427] (-) TimerEvent: {}
+[12.879804] (-) TimerEvent: {}
+[13.140249] (-) TimerEvent: {}
+[13.241726] (-) TimerEvent: {}
+[13.669685] (-) TimerEvent: {}
+[13.879003] (-) TimerEvent: {}
+[13.980036] (-) TimerEvent: {}
+[14.356576] (wall_follower) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid WallFollower::update_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[14.356945] (-) TimerEvent: {}
+[14.357197] (wall_follower) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:181:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[14.358111] (wall_follower) StderrLine: {'line': b'  181 |   \x1b[01;31m\x1b[K}\x1b[m\x1b[K else {\n'}
+[14.358784] (wall_follower) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[14.358831] (wall_follower) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:194:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[14.358883] (wall_follower) StderrLine: {'line': b'  194 |   \x1b[01;31m\x1b[K}\x1b[m\x1b[K else {\n'}
+[14.358919] (wall_follower) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[14.358955] (wall_follower) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:216:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kturning_left\x1b[m\x1b[K\xe2\x80\x99\n'}
+[14.358992] (wall_follower) StderrLine: {'line': b'  216 |    prev_yaw = robot_pose_\n'}
+[14.359027] (wall_follower) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[14.359065] (wall_follower) StderrLine: {'line': b'      |                          \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[14.359100] (wall_follower) StderrLine: {'line': b'  217 |    \x1b[32m\x1b[Kturning_left\x1b[m\x1b[K = true;\n'}
+[14.359134] (wall_follower) StderrLine: {'line': b'      |    \x1b[32m\x1b[K~~~~~~~~~~~~\x1b[m\x1b[K           \n'}
+[14.359228] (wall_follower) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:228:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kturning_right\x1b[m\x1b[K\xe2\x80\x99\n'}
+[14.359282] (wall_follower) StderrLine: {'line': b'  228 |    prev_yaw = robot_pose_\n'}
+[14.359320] (wall_follower) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[14.359357] (wall_follower) StderrLine: {'line': b'      |                          \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[14.359393] (wall_follower) StderrLine: {'line': b'  229 |    \x1b[32m\x1b[Kturning_right\x1b[m\x1b[K = true;\n'}
+[14.359429] (wall_follower) StderrLine: {'line': b'      |    \x1b[32m\x1b[K~~~~~~~~~~~~~\x1b[m\x1b[K          \n'}
+[14.480221] (-) TimerEvent: {}
+[14.594232] (-) TimerEvent: {}
+[14.713309] (-) TimerEvent: {}
+[14.884322] (-) TimerEvent: {}
+[14.985003] (-) TimerEvent: {}
+[15.713240] (-) TimerEvent: {}
+[15.818764] (-) TimerEvent: {}
+[15.929418] (-) TimerEvent: {}
+[16.032181] (-) TimerEvent: {}
+[16.136001] (-) TimerEvent: {}
+[16.244849] (-) TimerEvent: {}
+[16.348845] (-) TimerEvent: {}
+[16.449434] (-) TimerEvent: {}
+[16.566782] (-) TimerEvent: {}
+[16.671042] (-) TimerEvent: {}
+[16.772517] (-) TimerEvent: {}
+[16.874049] (-) TimerEvent: {}
+[16.976482] (-) TimerEvent: {}
+[17.080001] (-) TimerEvent: {}
+[17.187982] (-) TimerEvent: {}
+[17.292130] (-) TimerEvent: {}
+[17.395224] (-) TimerEvent: {}
+[17.495698] (-) TimerEvent: {}
+[17.596984] (-) TimerEvent: {}
+[17.699201] (-) TimerEvent: {}
+[17.799717] (-) TimerEvent: {}
+[17.901791] (-) TimerEvent: {}
+[18.004034] (-) TimerEvent: {}
+[18.068124] (wall_follower) StderrLine: {'line': b'make[2]: *** [CMakeFiles/wall_follower.dir/build.make:63: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1\n'}
+[18.068991] (wall_follower) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/wall_follower.dir/all] Error 2\n'}
+[18.070117] (wall_follower) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[18.077268] (wall_follower) CommandEnded: {'returncode': 2}
+[18.104268] (-) TimerEvent: {}
+[18.169257] (wall_follower) JobEnded: {'identifier': 'wall_follower', 'rc': 2}
+[18.170395] (-) EventReactorShutdown: {}
