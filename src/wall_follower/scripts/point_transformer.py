@@ -75,7 +75,7 @@ class PointTransformer(Node):
 
 
 	def save_marker_positions(self):
-		csv_file_path = "/home/comp3431/colcon_ws/src/wall_follower/scripts/positions.csv"
+		csv_file_path = "/home/rsa/colcon_ws/src/wall_follower/scripts/positions.csv"
 		self.get_logger().info(f"Inside save function\n")
 		
 		
