@@ -22,12 +22,9 @@ class MarkerNavigator(Node):
         # self.odom_subscription = self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
         # self.get_logger().info("Subscribed to /odom topic")
 
-<<<<<<< HEAD
         # Publisher for initial pose
         self.initial_pose_publisher = self.create_publisher(PoseStamped, '/initialpose', 10)
 
-=======
->>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
         self.start_pose, self.markers = self.load_markers('/home/rsa/colcon_ws/src/wall_follower/scripts/robot_marker_positions.csv')
         self.set_initial_pose()
 
@@ -108,20 +105,12 @@ class MarkerNavigator(Node):
 
         # Publish to `/initialpose`
         self.get_logger().info(f"Setting initial pose: {self.start_pose[0]}, {self.start_pose[1]}, {self.start_pose[2]}")
-<<<<<<< HEAD
         self.initial_pose_publisher.publish(initial_pose)
         
         # Sleep to give time for the initial pose to be set
         time.sleep(2)
 
         self.navigate_to_markers()
-=======
-        self.navigate_to_markers()
-        
-        # self.client.wait_for_server()
-        
-        # time.sleep(1)
->>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 
         #self.client.send_goal_async(NavigateToPose.Goal(pose=initial_pose), feedback_callback=self.feedback_callback)
     
@@ -141,14 +130,9 @@ class MarkerNavigator(Node):
             return
 
         self.get_logger().info("Sending goal...")
-<<<<<<< HEAD
         send_goal_future = self.client.send_goal(goal_msg)
         self.client.wait_for_server()
         # send_goal_future.add_done_callback(self.goal_response_callback)
-=======
-        self._send_goal_future = self.client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback)
-        self._send_goal_future.add_done_callback(self.goal_response_callback)
->>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 
     def goal_response_callback(self, future):
         goal_handle = future.result()
@@ -157,21 +141,11 @@ class MarkerNavigator(Node):
             return
 
         self.get_logger().info('Goal accepted :)')
-<<<<<<< HEAD
         
         # Wait for the result asynchronously
         self.client.wait_for_server()
         # result_future = goal_handle.get_result_async()
 
-=======
-
-        self._get_result_future = goal_handle.get_result_async()
-        # self._get_result_future.add_done_callback(self.get_result_callback)
-
-    def get_result_callback(self, future):
-        result = future.result().result
-        self.get_logger().info('Result: {0}'.format(result.sequence))
->>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
     
     def navigate_to_markers(self):
         # self.set_initial_pose()  # Set the initial position on the map
@@ -193,9 +167,4 @@ def main(args=None):
     rclpy.shutdown()
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     main()
-=======
-    main()
-
->>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
