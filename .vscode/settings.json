@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
         "cctype": "cpp",
@@ -72,5 +73,10 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "bit": "cpp"
+=======
+    "files.associations": {
+        "cmath": "cpp",
+        "complex": "cpp"
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
     }
 }

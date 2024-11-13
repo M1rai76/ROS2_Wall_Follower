@@ -1,0 +1,35 @@
+[1.542s] Invoking command in '/home/rsa/colcon_ws/build/pl_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/pl_interface -- -j4 -l4
+[3.278s] [100%] Built target pl_interface
+[3.527s] Invoked command in '/home/rsa/colcon_ws/build/pl_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/pl_interface -- -j4 -l4
+[5.698s] Invoking command in '/home/rsa/colcon_ws/build/pl_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/rsa/colcon_ws/build/pl_interface
+[6.079s] -- Install configuration: ""
+[6.202s] -- Execute custom install script
+[6.207s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/lib/pl_interface/pl_interface
+[6.208s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface//launch/__pycache__/pl_interface.launch.cpython-38.pyc
+[6.208s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface//launch/pl_interface.launch.py
+[6.325s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/include//pl_interface/pl_interface.hpp
+[6.329s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/environment/pythonpath.sh
+[6.329s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/environment/pythonpath.dsv
+[6.340s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/lib/python3.8/site-packages/pl_interface/__init__.py
+[6.344s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/lib/python3.8/site-packages/pl_interface/landmark.py
+[6.493s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/lib/pl_interface/see_marker.py
+[6.529s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/lib/pl_interface/point_transformer.py
+[6.530s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/ament_index/resource_index/package_run_dependencies/pl_interface
+[6.533s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/ament_index/resource_index/parent_prefix_path/pl_interface
+[6.534s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/environment/ament_prefix_path.sh
+[6.570s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/environment/ament_prefix_path.dsv
+[6.571s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/environment/path.sh
+[6.571s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/environment/path.dsv
+[6.571s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/local_setup.bash
+[6.571s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/local_setup.sh
+[6.572s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/local_setup.zsh
+[6.572s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/local_setup.dsv
+[6.572s] -- Symlinking: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/package.dsv
+[6.642s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/ament_index/resource_index/packages/pl_interface
+[6.644s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.644s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.645s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/cmake/pl_interfaceConfig.cmake
+[6.646s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/cmake/pl_interfaceConfig-version.cmake
+[6.646s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/pl_interface/share/pl_interface/package.xml
+[7.090s] Listing '/home/rsa/colcon_ws/install/pl_interface/lib/python3.8/site-packages/pl_interface'...
+[7.336s] Invoked command in '/home/rsa/colcon_ws/build/pl_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/rsa/colcon_ws/build/pl_interface

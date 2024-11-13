@@ -1,0 +1,4 @@
+#  Try change list:
+
+- || to && 
+- increased START_RANGE to 0.8

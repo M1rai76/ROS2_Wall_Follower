@@ -25,7 +25,11 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
+<<<<<<< HEAD
 AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
+=======
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -271,9 +275,12 @@ SITE:STRING=ubuntu
 //The directory containing a CMake configuration file for TinyXML2.
 TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
+<<<<<<< HEAD
 //Path to a program.
 _Python3_EXECUTABLE:FILEPATH=/usr/bin/python3.8
 
+=======
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 //Path to a library.
 _lib:FILEPATH=/opt/ros/foxy/lib/libtf2.so
 
@@ -626,8 +633,11 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/foxy/include][/opt/ros/foxy/lib/libfastrtps.so;/opt/ros/foxy/lib/libfastcdr.so][v()]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][c ][v1.1.1f()]
+<<<<<<< HEAD
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.10()]
+=======
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.10(3)]
 //Details about finding Threads
@@ -680,11 +690,16 @@ _OPENSSL_openssl_INCLUDEDIR:INTERNAL=
 _OPENSSL_openssl_LIBDIR:INTERNAL=
 _OPENSSL_openssl_PREFIX:INTERNAL=
 _OPENSSL_openssl_VERSION:INTERNAL=
+<<<<<<< HEAD
 //ADVANCED property for variable: _Python3_EXECUTABLE
 _Python3_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: _Python3_INTERPRETER_SIGNATURE
 _Python3_INTERPRETER_SIGNATURE-ADVANCED:INTERNAL=1
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=60fbcba4d3ec42cb22d9b25de2c7c03a
+=======
+//Index for unique symlink install targets
+__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=1
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_checked__OPENSSL:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto

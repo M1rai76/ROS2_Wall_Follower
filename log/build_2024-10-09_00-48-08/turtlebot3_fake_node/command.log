@@ -1,0 +1,2 @@
+Invoking command in '/home/rsa/colcon_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/turtlebot3_fake_node -- -j4 -l4
+Invoked command in '/home/rsa/colcon_ws/build/turtlebot3_fake_node' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/turtlebot3_fake_node -- -j4 -l4

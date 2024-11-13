@@ -1,0 +1,7 @@
+[0.119s] Invoking command in '/home/rsa/colcon_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/wall_follower -- -j4 -l4
+[0.289s] [35m[1mScanning dependencies of target wall_follower[0m
+[0.393s] [ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[3.086s] make[2]: *** [CMakeFiles/wall_follower.dir/build.make:63: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Interrupt
+[3.086s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/wall_follower.dir/all] Interrupt
+[3.087s] make: *** [Makefile:141: all] Interrupt
+[3.123s] Invoked command in '/home/rsa/colcon_ws/build/wall_follower' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/wall_follower -- -j4 -l4

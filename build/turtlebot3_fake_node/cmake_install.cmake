@@ -38,6 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake_node/turtlebot3_fake_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/turtlebot3_fake_node/turtlebot3_fake_node")
     file(RPATH_CHECK
@@ -134,6 +135,9 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_fake_node" TYPE FILE FILES "/home/rsa/colcon_ws/src/turtlebot3_simulations/turtlebot3_fake_node/package.xml")
+=======
+  include("/home/rsa/colcon_ws/build/turtlebot3_fake_node/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

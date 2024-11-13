@@ -1,0 +1,37 @@
+[0.163s] Invoking command in '/home/rsa/colcon_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/wall_follower -- -j4 -l4
+[0.982s] [35m[1mScanning dependencies of target wall_follower[0m
+[1.199s] [ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[15.607s] [100%] [32m[1mLinking CXX executable wall_follower[0m
+[16.923s] [100%] Built target wall_follower
+[16.966s] Invoked command in '/home/rsa/colcon_ws/build/wall_follower' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/wall_follower -- -j4 -l4
+[17.095s] Invoking command in '/home/rsa/colcon_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/rsa/colcon_ws/build/wall_follower
+[17.168s] -- Install configuration: ""
+[17.170s] -- Execute custom install script
+[17.172s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/lib/wall_follower/wall_follower
+[17.174s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower//launch/wall_follower.launch.py
+[17.176s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/include//wall_follower/wall_follower.hpp
+[17.177s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/environment/pythonpath.sh
+[17.178s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/environment/pythonpath.dsv
+[17.179s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/lib/python3.8/site-packages/wall_follower/__init__.py
+[17.180s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/lib/python3.8/site-packages/wall_follower/landmark.py
+[17.180s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/lib/wall_follower/see_marker.py
+[17.181s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/lib/wall_follower/point_transformer.py
+[17.181s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/ament_index/resource_index/package_run_dependencies/wall_follower
+[17.182s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/ament_index/resource_index/parent_prefix_path/wall_follower
+[17.182s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/environment/ament_prefix_path.sh
+[17.182s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/environment/ament_prefix_path.dsv
+[17.183s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/environment/path.sh
+[17.183s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/environment/path.dsv
+[17.184s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/local_setup.bash
+[17.184s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/local_setup.sh
+[17.185s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/local_setup.zsh
+[17.185s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/local_setup.dsv
+[17.185s] -- Symlinking: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/package.dsv
+[17.254s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/ament_index/resource_index/packages/wall_follower
+[17.255s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/cmake/ament_cmake_export_include_directories-extras.cmake
+[17.255s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/cmake/ament_cmake_export_dependencies-extras.cmake
+[17.266s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/cmake/wall_followerConfig.cmake
+[17.270s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/cmake/wall_followerConfig-version.cmake
+[17.271s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/wall_follower/share/wall_follower/package.xml
+[17.351s] Listing '/home/rsa/colcon_ws/install/wall_follower/lib/python3.8/site-packages/wall_follower'...
+[17.393s] Invoked command in '/home/rsa/colcon_ws/build/wall_follower' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/rsa/colcon_ws/build/wall_follower

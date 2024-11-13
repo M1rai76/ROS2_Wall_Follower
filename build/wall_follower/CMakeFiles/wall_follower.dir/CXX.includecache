@@ -19,16 +19,22 @@ tf2/LinearMath/Matrix3x3.h
 -
 tf2/LinearMath/Quaternion.h
 -
+<<<<<<< HEAD
 std_msgs/msg/bool.hpp
 -
+=======
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 
 /home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp
 wall_follower/wall_follower.hpp
 /home/rsa/colcon_ws/src/wall_follower/src/wall_follower/wall_follower.hpp
 memory
 -
+<<<<<<< HEAD
 fstream
 -
+=======
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 
 /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__builder.hpp
 builtin_interfaces/msg/detail/duration__struct.hpp
@@ -4438,6 +4444,7 @@ statistics_msgs/msg/detail/metrics_message__type_support.hpp
 
 /opt/ros/foxy/include/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
+<<<<<<< HEAD
 /opt/ros/foxy/include/std_msgs/msg/bool.hpp
 std_msgs/msg/detail/bool__struct.hpp
 /opt/ros/foxy/include/std_msgs/msg/std_msgs/msg/detail/bool__struct.hpp
@@ -4492,6 +4499,8 @@ std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 rosidl_typesupport_cpp/message_type_support.hpp
 /opt/ros/foxy/include/std_msgs/msg/detail/rosidl_typesupport_cpp/message_type_support.hpp
 
+=======
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.hpp
 rosidl_runtime_cpp/bounded_vector.hpp
 -
@@ -4522,8 +4531,11 @@ type_traits
 builtin_interfaces/msg/detail/time__traits.hpp
 /opt/ros/foxy/include/std_msgs/msg/detail/builtin_interfaces/msg/detail/time__traits.hpp
 
+<<<<<<< HEAD
 /opt/ros/foxy/include/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
+=======
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 /opt/ros/foxy/include/tf2/LinearMath/Matrix3x3.h
 Vector3.h
 /opt/ros/foxy/include/tf2/LinearMath/Vector3.h

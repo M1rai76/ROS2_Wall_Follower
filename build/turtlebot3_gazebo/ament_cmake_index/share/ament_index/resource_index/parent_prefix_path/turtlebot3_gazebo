@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /home/rsa/colcon_ws/install/wall_follower:/opt/ros/foxy
+=======
+/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3

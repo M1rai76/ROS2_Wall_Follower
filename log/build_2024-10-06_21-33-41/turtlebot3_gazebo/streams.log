@@ -1,0 +1,5 @@
+[0.174s] Invoking command in '/home/rsa/colcon_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/turtlebot3_gazebo -- -j4 -l4
+[0.451s] [ 25%] Built target obstacles
+[0.606s] [ 50%] Built target obstacle1
+[0.712s] [ 75%] Built target turtlebot3_drive
+[0.915s] [100%] Built target obstacle2

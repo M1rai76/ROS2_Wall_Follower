@@ -25,7 +25,11 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
+<<<<<<< HEAD
 AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
+=======
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -444,4 +448,9 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.10(3)]
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+<<<<<<< HEAD
+=======
+//Index for unique symlink install targets
+__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=0
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 

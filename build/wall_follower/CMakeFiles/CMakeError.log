@@ -1,6 +1,7 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command(s):/usr/bin/make cmTC_eee3a/fast && /usr/bin/make -f CMakeFiles/cmTC_eee3a.dir/build.make CMakeFiles/cmTC_eee3a.dir/build
 make[1]: Entering directory '/home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_eee3a.dir/src.c.o
@@ -9,13 +10,29 @@ Linking C executable cmTC_eee3a
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eee3a.dir/link.txt --verbose=1
 /usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_eee3a.dir/src.c.o  -o cmTC_eee3a 
 /usr/bin/ld: CMakeFiles/cmTC_eee3a.dir/src.c.o: in function `main':
+=======
+Run Build Command(s):/usr/bin/make cmTC_57ea2/fast && /usr/bin/make -f CMakeFiles/cmTC_57ea2.dir/build.make CMakeFiles/cmTC_57ea2.dir/build
+make[1]: Entering directory '/home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_57ea2.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_57ea2.dir/src.c.o   -c /home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_57ea2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57ea2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_57ea2.dir/src.c.o  -o cmTC_57ea2 
+/usr/bin/ld: CMakeFiles/cmTC_57ea2.dir/src.c.o: in function `main':
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
+<<<<<<< HEAD
 make[1]: *** [CMakeFiles/cmTC_eee3a.dir/build.make:87: cmTC_eee3a] Error 1
 make[1]: Leaving directory '/home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp'
 make: *** [Makefile:121: cmTC_eee3a/fast] Error 2
+=======
+make[1]: *** [CMakeFiles/cmTC_57ea2.dir/build.make:87: cmTC_57ea2] Error 1
+make[1]: Leaving directory '/home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_57ea2/fast] Error 2
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 
 
 Source file was:
@@ -41,6 +58,7 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command(s):/usr/bin/make cmTC_50d48/fast && /usr/bin/make -f CMakeFiles/cmTC_50d48.dir/build.make CMakeFiles/cmTC_50d48.dir/build
 make[1]: Entering directory '/home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_50d48.dir/CheckFunctionExists.c.o
@@ -53,6 +71,20 @@ collect2: error: ld returned 1 exit status
 make[1]: *** [CMakeFiles/cmTC_50d48.dir/build.make:87: cmTC_50d48] Error 1
 make[1]: Leaving directory '/home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp'
 make: *** [Makefile:121: cmTC_50d48/fast] Error 2
+=======
+Run Build Command(s):/usr/bin/make cmTC_262cf/fast && /usr/bin/make -f CMakeFiles/cmTC_262cf.dir/build.make CMakeFiles/cmTC_262cf.dir/build
+make[1]: Entering directory '/home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_262cf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_262cf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_262cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_262cf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_262cf.dir/CheckFunctionExists.c.o  -o cmTC_262cf  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_262cf.dir/build.make:87: cmTC_262cf] Error 1
+make[1]: Leaving directory '/home/rsa/colcon_ws/build/wall_follower/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_262cf/fast] Error 2
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 
 
 

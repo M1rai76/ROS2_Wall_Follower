@@ -55,3 +55,9 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
+<<<<<<< HEAD
+=======
+
+# uninstall files installed using the symlink install functions
+include("/home/rsa/colcon_ws/build/pl_interface/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3

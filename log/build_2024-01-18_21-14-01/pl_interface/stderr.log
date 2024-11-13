@@ -1,0 +1,17 @@
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:[m[K In function ‘[01m[Kbool pl_near_start(term, pobj**)[m[K’:
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:186:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  186 | bool pl_near_start([01;35m[Kterm goal[m[K, term *frame)
+      |                    [01;35m[K~~~~~^~~~[m[K
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:186:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kframe[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  186 | bool pl_near_start(term goal, [01;35m[Kterm *frame[m[K)
+      |                               [01;35m[K~~~~~~^~~~~[m[K
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:[m[K In function ‘[01m[Kbool pl_drive(term, pobj**)[m[K’:
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:205:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PlInterface::update_cmd_vel(double, double)[m[K’ is private within this context
+  205 |  current_node -> update_cmd_vel(RVAL(lv), RVAL(av)[01;31m[K)[m[K;
+      |                                                   [01;31m[K^[m[K
+[01m[K/home/rsa/colcon_ws/src/pl_interface/src/pl_interface.cpp:138:6:[m[K [01;36m[Knote: [m[Kdeclared private here
+  138 | void [01;36m[KPlInterface[m[K::update_cmd_vel(double linear, double angular)
+      |      [01;36m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/pl_interface.dir/build.make:63: CMakeFiles/pl_interface.dir/src/pl_interface.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pl_interface.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

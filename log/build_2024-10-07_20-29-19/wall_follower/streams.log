@@ -1,0 +1,11 @@
+[0.404s] Invoking command in '/home/rsa/colcon_ws/build/wall_follower': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/wall_follower -- -j4 -l4
+[0.663s] [35m[1mScanning dependencies of target wall_follower[0m
+[0.787s] [ 50%] [32mBuilding CXX object CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o[0m
+[3.484s] [01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:[m[K In member function ‘[01m[Kvoid WallFollower::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.484s] [01m[K/home/rsa/colcon_ws/src/wall_follower/src/wall_follower.cpp:148:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kf[m[K’ was not declared in this scope
+[3.484s]   148 |        fprintf(stderr, [01;31m[Kf[m[K"start_moving: %s\n", start_moving ? "true" : "false");
+[3.484s]       |                        [01;31m[K^[m[K
+[5.559s] make[2]: *** [CMakeFiles/wall_follower.dir/build.make:63: CMakeFiles/wall_follower.dir/src/wall_follower.cpp.o] Error 1
+[5.559s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/wall_follower.dir/all] Error 2
+[5.559s] make: *** [Makefile:141: all] Error 2
+[5.591s] Invoked command in '/home/rsa/colcon_ws/build/wall_follower' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/wall_follower -- -j4 -l4

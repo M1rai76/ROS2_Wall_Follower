@@ -113,7 +113,11 @@ void WallFollower::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 		start_y = current_y;
 		first = false;
 		// TODO check path
+<<<<<<< HEAD
 		std::ofstream file("/home/rsa/colcon_ws/src/wall_follower/scripts/positions.csv", std::ios::trunc);
+=======
+		std::ofstream file("/home/comp3431/colcon_ws/src/wall_follower/scripts/positions.csv", std::ios::trunc);
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 		// // safety check
 		if (!file) {
 		    std::string print = "File does not exist\n";

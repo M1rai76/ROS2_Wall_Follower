@@ -38,6 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pl_interface/pl_interface" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pl_interface/pl_interface")
     file(RPATH_CHECK
@@ -75,6 +76,9 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/pl_interface" TYPE DIRECTORY FILES "/home/rsa/colcon_ws/src/pl_interface/pl_interface/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+=======
+  include("/home/rsa/colcon_ws/build/pl_interface/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -85,6 +89,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       )
 endif()
 
+<<<<<<< HEAD
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pl_interface" TYPE PROGRAM FILES
     "/home/rsa/colcon_ws/src/pl_interface/scripts/see_marker.py"
@@ -159,6 +164,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pl_interface" TYPE FILE FILES "/home/rsa/colcon_ws/src/pl_interface/package.xml")
 endif()
 
+=======
+>>>>>>> 061b97f6a028e903f4f916eb0b56cdcc57e136a3
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

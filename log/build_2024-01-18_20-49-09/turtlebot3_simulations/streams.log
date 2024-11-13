@@ -1,0 +1,21 @@
+[0.234s] Invoking command in '/home/rsa/colcon_ws/build/turtlebot3_simulations': CMAKE_PREFIX_PATH=/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/turtlebot3_simulations -- -j2 -l2
+[0.304s] Invoked command in '/home/rsa/colcon_ws/build/turtlebot3_simulations' returned '0': CMAKE_PREFIX_PATH=/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy /usr/bin/cmake --build /home/rsa/colcon_ws/build/turtlebot3_simulations -- -j2 -l2
+[0.358s] Invoking command in '/home/rsa/colcon_ws/build/turtlebot3_simulations': CMAKE_PREFIX_PATH=/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy /usr/bin/cmake --install /home/rsa/colcon_ws/build/turtlebot3_simulations
+[0.373s] -- Install configuration: ""
+[0.374s] -- Execute custom install script
+[0.375s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/package_run_dependencies/turtlebot3_simulations
+[0.375s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/parent_prefix_path/turtlebot3_simulations
+[0.376s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/ament_prefix_path.sh
+[0.376s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/ament_prefix_path.dsv
+[0.377s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/path.sh
+[0.377s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/path.dsv
+[0.378s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.bash
+[0.379s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.sh
+[0.379s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.zsh
+[0.380s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.dsv
+[0.380s] -- Symlinking: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/package.dsv
+[0.402s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/packages/turtlebot3_simulations
+[0.403s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/cmake/turtlebot3_simulationsConfig.cmake
+[0.403s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/cmake/turtlebot3_simulationsConfig-version.cmake
+[0.404s] -- Up-to-date symlink: /home/rsa/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/package.xml
+[0.409s] Invoked command in '/home/rsa/colcon_ws/build/turtlebot3_simulations' returned '0': CMAKE_PREFIX_PATH=/home/rsa/colcon_ws/install/turtlebot3_gazebo:/home/rsa/colcon_ws/install/turtlebot3_fake_node:/home/rsa/colcon_ws/install/wall_follower:/home/rsa/colcon_ws/install/turtlebot3_simulations:/home/rsa/colcon_ws/install/pl_interface:/opt/ros/foxy /usr/bin/cmake --install /home/rsa/colcon_ws/build/turtlebot3_simulations
