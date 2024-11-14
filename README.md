@@ -1,7 +1,7 @@
 # Wall-Following and Marker Navigation with TurtleBot3 Waffle Pi
 
 This project is designed for **TurtleBot3 Waffle Pi** using **ROS 2 Foxy** and includes features such as **wall-following**, **marker detection**, **navigation using Nav2**, and **visual detection with OpenCV**. It is a comprehensive exploration of autonomous navigation within a maze environment, enabling the robot to detect colored markers, map its environment, and follow walls with adaptive control.
-
+This project was developed over a span of 12 weeks as a collaborative group project with the UNSW Robotics Division under the guidance of Claude Sammut, lecturer at UNSW. The project provides an autonomous navigation solution within a maze environment, utilizing TurtleBot3 Waffle Pi. It includes functionalities like wall-following, marker detection, Nav2-based navigation, and OpenCV for visual processing
 ---
 
 ## Table of Contents
