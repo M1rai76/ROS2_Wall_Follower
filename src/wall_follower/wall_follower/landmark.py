@@ -4,11 +4,18 @@ import rclpy
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 
+# colours = {
+#     "pink": ((140, 0, 0), (170, 255, 255)),
+#     "blue": ((95, 0, 0), (117, 255, 255)),
+#     "green": ((63, 0, 0), (85, 255, 255)),
+#     "yellow": ((17, 0, 0), (32, 255, 255))
+# }
+
 colours = {
-	"pink":	 	((140,0,0), (170, 255, 255)),
-	"blue":		((100,0,0), (130, 255, 255)),
-	"green":	((40,0,0), (80, 255, 255)),
-	"yellow":	((25,0,0), (32, 255, 255))
+    "pink": ((142,84,102), (166,255,220)),
+    "blue": ((103,60,35), (120,255,240)),
+    "green": ((21,60,121), (29,255,255)),
+    "yellow": ((71,61,29), (99,255,255))
 }
 
 
@@ -20,6 +27,9 @@ marker_type = [
 	"pink/green",
 	"pink/blue"
 ]
+
+
+
 
 marker_colour = [
 	((1.0, 1.0, 0.0), (1.0, 0.56, 0.75)),
@@ -36,7 +46,7 @@ class Landmark:
 
 	def __init__(self, mtype, markers):
 		self.mtype = mtype
-		self.count = 0;
+		self.count = 0
 		self.sum_x = 0.0
 		self.sum_y = 0.0
 		self.top_marker = None

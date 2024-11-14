@@ -1,4 +1,3 @@
-find_package(Python3 REQUIRED COMPONENTS Interpreter)
 ################################################################################
 # Set minimum required version of cmake, project name and compile options
 ################################################################################
@@ -66,7 +65,7 @@ install(DIRECTORY include/
 
 # Install Python modules
 ament_python_install_package(${PROJECT_NAME})
-
+# Install Python executables
 install(PROGRAMS
   scripts/see_marker.py
   scripts/point_transformer.py

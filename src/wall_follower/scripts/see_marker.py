@@ -25,6 +25,9 @@ from wall_follower.landmark import marker_type
 field_of_view_h = 62.2
 field_of_view_v = 48.8
 
+# field_of_view_h = 16.6
+# field_of_view_v = 12.2
+
 
 class SeeMarker(Node):
 	"""
@@ -36,7 +39,8 @@ class SeeMarker(Node):
 		"""
 		# Initiate the Node class's constructor and give it a name
 		super().__init__('see_marker')
-
+		self.get_logger().info('Created Node')
+		print("Created Node")
 		self.range = 0
 		self.prev_h = 0
 		self.prev_r = 0
@@ -45,7 +49,7 @@ class SeeMarker(Node):
 		# from the video_frames topic. The queue size is 10 messages.
 		self.subscription = self.create_subscription(
 			Image,
-			'/camera/image_raw', 
+			'/camera/image_raw/uncompressed', 
 			self.listener_callback, 
 			10)
 		self.subscription # prevent unused variable warning
@@ -71,14 +75,17 @@ class SeeMarker(Node):
 		
 		# Convert BGR image to HSV
 		hsv_frame = cv2.cvtColor(current_frame, cv2.COLOR_BGR2HSV)
+		
 
 		# Find pink blob
-		pink_blob = segment(current_frame, hsv_frame, "pink")
+		pink_blob, pink_seg = segment(current_frame, hsv_frame, "pink", self.get_logger())
+
 		if pink_blob:
 			(pink_x, pink_y, pink_h, p_d, p_a) = pink_blob
+			self.get_logger().info(f'Pink Angle: {p_a}')
 
 			for c in ["blue", "green", "yellow"]:
-				blob = segment(current_frame, hsv_frame, c)
+				blob, _ = segment(current_frame, hsv_frame, c, self.get_logger())
 				if blob:
 					(c_x, c_y, c_h, c_d, c_a) = blob
 
@@ -104,25 +111,45 @@ class SeeMarker(Node):
 					marker_at.point.y = y
 
 #					print(f'Camera coordinates: {x}, {y}')
+					self.get_logger().info(f'{c} Area: {c_a}')
+					self.get_logger().info(f'{marker_at.point.z} Marker at: {x} and {y}, {c_d} and {c_a}')
 					self.point_publisher.publish(marker_at)
 #					self.get_logger().info('Published Point: x=%f, y=%f, z=%f' %
 #						(marker_at.point.x, marker_at.point.y, marker_at.point.z))
 
 
 		# Display camera image
-		cv2.imshow("camera", current_frame)	
+		# default_position = (10, 30)
+		# # Define the font, scale, color, and thickness
+		# font = cv2.FONT_HERSHEY_SIMPLEX
+		# font_scale = 1
+		# color = (255, 105, 180)  # Pink color in BGR format
+		# thickness = 2
+		# concatenated_text = f"{c_h} {pink_h}"
+		# # cv2.imshow("HSV Frame", hsv_frame)
+		# cv2.setMouseCallback("HSV Frame", self.get_hsv_value, hsv_frame)
+		# cv2.waitKey(1)
+
+		# cv2.putText(current_frame,concatenated_text,default_position, font, font_scale, color, thickness)
+		cv2.imshow("camera", pink_seg)	
 		cv2.waitKey(1)
+		
+	# def get_hsv_value(self, event, x, y, flags, param):
+    #     # Capture HSV values when the left mouse button is clicked
+	# 	if event == cv2.EVENT_LBUTTONDOWN:
+	# 		hsv_value = param[y, x]  # y is row, x is column
+	# 		print(f"HSV Value at ({x}, {y}): {hsv_value}")
 
 
 colours = {
-	"pink":	 	((140,0,0), (170, 255, 255)),
-	"blue":		((100,0,0), (130, 255, 255)),
-	"green":	((40,0,0), (80, 255, 255)),
-	"yellow":	((25,0,0), (32, 255, 255))
+    "pink": ((142,84,102), (166,255,220)),
+    "blue": ((103,60,35), (120,255,240)),
+    "green": ((71,61,29), (99,255,255)),
+    "yellow": ((21,60,121), (29,255,255))
 }
 
 
-def segment(current_frame, hsv_frame, colour):
+def segment(current_frame, hsv_frame, colour, logger):
 	"""
 	Mask out everything except the specified colour
 	Connect pixels to form a blob
@@ -138,13 +165,13 @@ def segment(current_frame, hsv_frame, colour):
 	blobs = cv2.connectedComponentsWithStats(mask, 4, cv2.CV_32S)
 
 	# Display masked image
-#	cv2.imshow("result", result)
+	# cv2.imshow("result", result)
  
 	# Print statistics for each blob (connected component)
-	return get_stats(blobs, colour)
+	return get_stats(blobs, colour, logger), result
 
 
-def get_stats(blobs, colour):
+def get_stats(blobs, colour, logger):
 	"""
 	Print statistics for each blob (connected component)
 	of the specified colour
@@ -157,7 +184,7 @@ def get_stats(blobs, colour):
 
 	largest = 0
 	rval = None
-	centre = 320 # 640/2
+	centre = 80 # 160/2
 
 	for i in range(1, numLabels):
 		x = stats[i, cv2.CC_STAT_LEFT]
@@ -166,22 +193,26 @@ def get_stats(blobs, colour):
 		h = stats[i, cv2.CC_STAT_HEIGHT]
 		area = stats[i, cv2.CC_STAT_AREA]
 		(cx, cy) = centroids[i]
-#		print(colour, x, y, w, h, area, cx, cy)
+		# logger.info("Inside the function")
 
-		if area > largest:
+		if area < 1000:
+			continue
+
+		elif area > largest:
 			largest = area
-			distance = 35.772 * pow(h, -0.859) # obtained experimentally
+			distance = 9.5 * pow(h, -0.859) # obtained experimentally
 			aspect_ratio = h/w
 			if aspect_ratio < 0.8:
 				if cx < centre:
 					cx += h-w
 				else:
 					cx -= h-w
-			angle = (centre - cx) * field_of_view_h / 480
+			angle = (centre - cx) * field_of_view_h / 120
 			if angle < 0:
 				angle += 360
 			rval = (cx, cy, h, distance, angle)
-
+		if colour == "pink":
+			logger.info(f'height: {h} and width {w} and area {area}')
 	return rval
 
 
@@ -199,6 +230,7 @@ def polar_to_cartesian(distance, angle):
 def main(args=None):
 	
 	# Initialize the rclpy library
+	print("test")
 	rclpy.init(args=args)
 	
 	# Create the node
@@ -212,8 +244,10 @@ def main(args=None):
 	# when the garbage collector destroys the node object)
 	see_marker.destroy_node()
 	
+	
 	# Shutdown the ROS client library for Python
 	rclpy.shutdown()
 	
 if __name__ == '__main__':
+
 	main()

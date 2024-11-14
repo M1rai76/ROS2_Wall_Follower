@@ -1,10 +1,6 @@
 Terminal 1: ros2 launch turtlebot3_gazebo turtlebot3_maze.launch.py
 Terminal 2: ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
-Terminal 3: ros2 launch wall_follower wall_follower.launch.py
+Terminal 3: ros2 launch wall_follower wall_follower.launch.py > data.txt
 
-Terminal (export model): export TURTLEBOT3_MODEL=waffle_pi
-Terminal (save map): ros2 run nav2_map_server map_saver_cli -f ~/colcon_ws/src/wall_follower/scripts/map.yaml
-Terminal (run navigation node): ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=False map:=/home/rsa/colcon_ws/src/wall_follower/scripts/map.yaml
-Terminal (launch marker_navigator.py): ros2 launch wall_follower marker_navigator.launch.py
 
-ros2 launch turtlebot3_bringup robot.launch.py
+Run bot: ros2 launch turtlebot3_bringup robot.launch.py

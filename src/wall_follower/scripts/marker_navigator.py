@@ -3,12 +3,12 @@
 import rclpy
 from rclpy.node import Node
 import csv
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseWithCovarianceStamped
 # from nav2_simple_commander.robot_navigator import BasicNavigator
 from nav2_msgs.action import NavigateToPose
 from rclpy.action import ActionClient
 import time
-from nav_msgs.msg import Odometry
+# from nav_msgs.msg import Odometry
 import math
 # import tf_transformations
 
@@ -22,11 +22,10 @@ class MarkerNavigator(Node):
         # self.odom_subscription = self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
         # self.get_logger().info("Subscribed to /odom topic")
 
-        # Publisher for initial pose
-        self.initial_pose_publisher = self.create_publisher(PoseStamped, '/initialpose', 10)
-
-        self.start_pose, self.markers = self.load_markers('/home/rsa/colcon_ws/src/wall_follower/scripts/robot_marker_positions.csv')
-        self.set_initial_pose()
+        # self.initial_pose_publisher = self.create_publisher(PoseWithCovarianceStamped, '/initialpose', 10)
+        self.start_pose, self.markers = self.load_markers('/home/comp3431/colcon_ws/src/wall_follower/scripts/positions.csv')
+        self.navigate_to_markers()
+        # self.set_initial_pose()
 
     def odom_callback(self, msg):
         # Extract the robot's position
@@ -96,19 +95,22 @@ class MarkerNavigator(Node):
 
     def set_initial_pose(self):
         # Set initial pose based on the start position and heading
-        initial_pose = PoseStamped()
+        initial_pose = PoseWithCovarianceStamped()
         initial_pose.header.frame_id = 'map'
         # initial_pose.header.stamp = rclpy.time.Time()
-        initial_pose.pose.position.x = self.start_pose[0]
-        initial_pose.pose.position.y = self.start_pose[1]
-        initial_pose.pose.orientation.w = self.start_pose[2]
+        initial_pose.pose.pose.position.x = self.start_pose[0]
+        initial_pose.pose.pose.position.y = self.start_pose[1]
+        initial_pose.pose.pose.orientation.w = self.start_pose[2]
 
         # Publish to `/initialpose`
         self.get_logger().info(f"Setting initial pose: {self.start_pose[0]}, {self.start_pose[1]}, {self.start_pose[2]}")
-        self.initial_pose_publisher.publish(initial_pose)
+        # self.initial_pose_publisher.publish(initial_pose)
+        self.get_logger().info(f"Setting initial pose complete")
         
-        # Sleep to give time for the initial pose to be set
-        time.sleep(2)
+        # self.client.wait_for_server(timeout_sec=5.0)
+        
+        # time.sleep(5)
+
 
         self.navigate_to_markers()
 
@@ -130,9 +132,17 @@ class MarkerNavigator(Node):
             return
 
         self.get_logger().info("Sending goal...")
-        send_goal_future = self.client.send_goal(goal_msg)
-        self.client.wait_for_server()
-        # send_goal_future.add_done_callback(self.goal_response_callback)
+        self._send_goal_future = self.client.send_goal(goal_msg)
+     
+        # self._send_goal_future = self.client.send_goal_async(goal_msg)
+        # rclpy.spin_until_future_complete(self, self._send_goal_future)
+     
+
+        # self.client.wait_for_server(timeout_sec=5.0)
+
+
+        self._send_goal_future.add_done_callback(self.goal_response_callback)
+        self.get_logger().info('HERE NOW :)')
 
     def goal_response_callback(self, future):
         goal_handle = future.result()
@@ -141,11 +151,14 @@ class MarkerNavigator(Node):
             return
 
         self.get_logger().info('Goal accepted :)')
-        
-        # Wait for the result asynchronously
-        self.client.wait_for_server()
-        # result_future = goal_handle.get_result_async()
 
+        self.client.wait_for_server(timeout_sec=5.0)
+        # self._get_result_future = goal_handle.get_result_async()
+        # self._get_result_future.add_done_callback(self.get_result_callback)
+
+    def get_result_callback(self, future):
+        result = future.result().result
+        self.get_logger().info('Result: {0}'.format(result.sequence))
     
     def navigate_to_markers(self):
         # self.set_initial_pose()  # Set the initial position on the map

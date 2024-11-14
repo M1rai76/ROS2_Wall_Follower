@@ -11,11 +11,13 @@ def generate_launch_description():
         Node(
             package='wall_follower',
             executable='see_marker.py',
+            output="screen",
             name='see_marker'
         ),
         Node(
             package='wall_follower',
             executable='point_transformer.py',
+            output="screen",
             name='point_transformer',
         )
     ])
