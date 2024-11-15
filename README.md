@@ -1,165 +1,114 @@
-# Wall-Following and Marker Navigation with TurtleBot3 Waffle Pi
+# 🤖 Wall-Following Robot Navigation System
 
-This project is designed for **TurtleBot3 Waffle Pi** using **ROS 2 Foxy** and includes features such as **wall-following**, **marker detection**, **navigation using Nav2**, and **visual detection with OpenCV**. It is a comprehensive exploration of autonomous navigation within a maze environment, enabling the robot to detect colored markers, map its environment, and follow walls with adaptive control.
-This project was developed over a span of 12 weeks as a collaborative group project with the UNSW Robotics Division under the guidance of Claude Sammut, lecturer at UNSW. The project provides an autonomous navigation solution within a maze environment, utilizing TurtleBot3 Waffle Pi. It includes functionalities like wall-following, marker detection, Nav2-based navigation, and OpenCV for visual processing
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Setup](#setup)
-- [Project Structure](#project-structure)
-- [Features](#features)
-  - [1. Wall-Following](#1-wall-following)
-  - [2. Marker Detection](#2-marker-detection)
-  - [3. Navigation with Nav2](#3-navigation-with-nav2)
-  - [4. Initial Pose and AMCL Configuration](#4-initial-pose-and-amcl-configuration)
-  - [5. ROS Parameters and Configurations](#5-ros-parameters-and-configurations)
-- [Technical Concepts](#technical-concepts)
-  - [Inflation Radius](#inflation-radius)
-  - [Tolerance](#tolerance)
-- [Usage](#usage)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+This project uses the **ROS2 Framework**, **OpenCV**, **Nav2**, **Gazebo**, and **Cartographer** to develop an autonomous navigation system for a TurtleBot3 robot. The robot autonomously follows walls, detects and localizes color-coded markers, and navigates all while visualizing its path and detected markers in RViz. The project demonstrates the integration of advanced robotic navigation concepts, computer vision techniques, and simulation tools. TurtleBot3 was chosen as the robotic platform due to its compatibility with ROS2 and its well-documented resources. **Reference**: [TurtleBot3 Overview and Documentation](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/).
 
 ---
 
-## Overview
+## 🌟 Features
 
-This project is aimed at providing an autonomous solution for navigating within a maze using TurtleBot3 Waffle Pi. Key functionalities include wall-following for structured path traversal, color-based marker detection for localization, and navigating to specific goal points using the Nav2 stack. OpenCV is leveraged to enable real-time color-based landmark detection.
+### 1. 🚧 Autonomous Wall-Following
+   - Implements a **left-wall following** algorithm to guide the robot through a maze.
+   - Uses TurtleBot3’s sensor data to maintain a stable distance from walls, ensuring smooth navigation.
+   - **Reference**: [TurtleBot3 GitHub Repository](https://github.com/ROBOTIS-GIT/turtlebot3)
 
-## Setup
+### 2. 🎯 Marker Detection with OpenCV
+   - Uses **OpenCV** and **linear regression** to estimate the distance and shape of color-coded markers.
+   - Differentiates markers based on unique color combinations (e.g., pink on green, blue on pink).
+   - Publishes marker positions to the `/marker_position` topic for further processing.
+
+### 3. 🌍 Marker Position Transformation
+   - Converts marker positions from the **camera frame** to the **map frame** using **tf2**, ensuring accurate localization.
+   - Publishes transformed positions as a `MarkerArray`, enabling real-time visualization in RViz.
+   - **Reference**: Learn more about [tf2 Transformations](https://docs.ros.org/en/foxy/Tutorials/Tf2.html).
+
+### 4. 🧭 Path Planning with Nav2
+   - Uses **Nav2** for advanced path planning and obstacle avoidance.
+   - Allows the robot to navigate from one marker to another in a predefined sequence.
+   - Users can interactively set goals in RViz by clicking on markers, enabling flexible and dynamic navigation.
+   - **Reference**: Explore the [Nav2 Documentation](https://navigation.ros.org/).
+
+### 5. 🖥️ Simulation in Gazebo
+   - Simulates the robot and its environment in **Gazebo**, allowing realistic testing of navigation algorithms in a virtual maze.
+   - Provides an efficient way to test and refine algorithms before deployment on physical robots.
+   - **Reference**: [Gazebo Documentation](http://gazebosim.org/tutorials)
+
+### 6. 🗺️ Mapping with Cartographer
+   - Integrates **Cartographer** for 2D SLAM, allowing the robot to create a real-time map of its environment while navigating.
+   - Displays the generated map in RViz alongside the robot’s path and detected markers.
+   - **Reference**: [Cartographer Documentation](https://google-cartographer.readthedocs.io/en/latest/)
+
+---
+
+## 🛠️ Project Structure
+
+### 1. Wall-Following Node
+   - Implements left-wall following behavior using sensor data, enabling autonomous maze navigation.
+
+### 2. Marker Detection (`see_marker` Node)
+   - Processes images from the TurtleBot3 Pi camera to detect and identify color-coded markers.
+   - Publishes marker positions to the `/marker_position` topic.
+
+### 3. Coordinate Transformation (`point_transformer` Node)
+   - Subscribes to `/marker_position` to retrieve detected marker positions.
+   - Transforms marker coordinates to the `map` frame using tf2 for accurate display in RViz.
+   - Publishes transformed marker positions as a `MarkerArray`.
+
+### 4. Nav2 Path Planning
+   - Reads marker positions and their sequence from a configuration file and generates a path for the robot to follow.
+   - Integrates ROS2’s Nav2 stack to autonomously navigate between markers and avoid obstacles.
+
+---
+
+## 📋 Notes
+
+### Usage Instructions
+- The detailed usage instructions for this project, including ROS2 CLI commands and launch files, are located in the `src/wall_follower/README.md` file in the project directory.
 
 ### Prerequisites
+- ROS2 (Foxy or later) installed and configured.
+- Familiarity with ROS2 CLI commands is required.
+- TurtleBot3 and its dependencies installed. **Reference**: [TurtleBot3 Overview and Documentation](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/).
 
-- **ROS 2 Foxy**
-- **TurtleBot3 Waffle Pi model**
-- **OpenCV** for Python
-- **Nav2** and related packages
-- **Gazebo** for simulation
-- **Rviz2** for visualization
+---
 
-Install dependencies:
+## 🔧 Key ROS2 Concepts Demonstrated
 
-```bash
-sudo apt update
-sudo apt install ros-foxy-turtlebot3* ros-foxy-nav2* ros-foxy-gazebo-ros-pkgs python3-opencv
-```
+### 🚀 Core Features
+1. **Publishers and Subscribers**:
+   - Demonstrates real-time data exchange between nodes using ROS2 publishers and subscribers.
+   - **Reference**: [Writing ROS2 Publishers and Subscribers](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
 
-### Setting Up ROS Domain ID
+2. **Nodes and Topics**:
+   - Each feature is implemented as a separate ROS2 node, communicating over well-defined topics (e.g., `/marker_position`, `/odom`).
 
-For multi-robot or multi-user scenarios, setting a unique ROS domain ID is recommended:
+3. **tf2 Transformations**:
+   - Converts marker coordinates from the camera frame to the map frame for accurate localization.
 
-```bash
-export ROS_DOMAIN_ID=2  # Example domain ID
-```
+4. **Nav2 Integration**:
+   - Implements advanced path planning and obstacle avoidance using Nav2’s robust navigation stack.
 
-### Building the Workspace
+5. **Interactive Visualization with RViz**:
+   - Real-time visualization of the robot’s path and marker positions in RViz for debugging and analysis.
 
-Clone the repository, navigate to your workspace, and build it with `colcon`:
+---
 
-```bash
-cd ~/colcon_ws/src
-git clone https://github.com/your-repo/wall-follower-marker-navigation.git
-cd ..
-colcon build
-source install/setup.bash
-```
+## 🔧 Potential Improvements
 
-## Project Structure
+- **Dynamic Obstacle Avoidance**: Enhance Nav2 integration to handle dynamic obstacles in real-time.
+- **Lighting Adaptation**: Improve marker detection under variable lighting conditions.
+- **Customizable Marker Sequences**: Allow users to specify custom paths or navigation goals dynamically in RViz.
 
-```
-.
-├── src/
-│   ├── wall_follower/
-│   ├── marker_navigator/
-│   ├── scripts/
-│   │   ├── see_marker.py
-│   │   ├── point_transformer.py
-│   ├── config/
-│   │   ├── nav2_params.yaml
-│   │   ├── amcl_params.yaml
-│   ├── launch/
-│   │   ├── wall_follower.launch.py
-│   │   ├── marker_navigator.launch.py
-│   └── CMakeLists.txt
-├── README.md
-└── LICENSE
-```
+---
 
-## Features
+## 📝 Academic and Project Context
 
-### 1. Wall-Following
+This project was developed as part of the **COMP3431 Robotic Software Architecture** course at UNSW under the guidance of **Prof. Claude Summit**, Head of Artificial Intelligence at the UNSW School of Computer Science. It provided hands-on experience with:
 
-- **Description**: The robot follows the maze walls using adaptive control, moving forward, turning left or right, and making corrections based on distance data.
-- **Logic**: The laser scanner detects nearby walls, and the robot adjusts its movement by maintaining a set distance from the wall.
-- **Code**: Located in `src/wall_follower/`, primarily in `wall_follower.cpp`.
+- ROS2 concepts like publishers, subscribers, nodes, and topics.
+- tf2 transformations for coordinate management across frames.
+- Nav2 for autonomous navigation and path planning.
+- OpenCV for computer vision applications in robotics.
+- Gazebo for realistic simulation and testing.
+- Cartographer for real-time mapping and SLAM integration.
 
-### 2. Marker Detection
-
-- **Description**: Using OpenCV, the robot detects colored markers in real-time via a camera.
-- **Logic**: Markers are detected based on color segmentation (HSV color space), identifying specific color combinations to recognize landmarks.
-- **Code**: Defined in `scripts/see_marker.py` and `landmark.py`.
-- **Configuration**: HSV values for colors are set in `landmark.py`. Markers include unique color pairs, e.g., “pink on blue.”
-
-### 3. Navigation with Nav2
-
-- **Description**: The robot navigates to detected markers using the Nav2 stack, setting up goals for each marker.
-- **Logic**: Using `NavigateToPose` from Nav2, the robot can autonomously move to a specified marker position.
-- **Code**: `src/marker_navigator/marker_navigator.py`
-- **Parameters**: Parameters for Nav2 are configured in `config/nav2_params.yaml`, including inflation radius, robot footprint, and controller parameters.
-
-### 4. Initial Pose and AMCL Configuration
-
-- **Description**: To initialize localization, an initial pose is set either programmatically or manually in Rviz.
-- **Code**: Initial pose handling is managed in `marker_navigator.py`.
-- **AMCL**: Adaptive Monte Carlo Localization (AMCL) is configured to ensure accurate localization in the maze.
-
-### 5. ROS Parameters and Configurations
-
-- **Inflation Radius**: Defines the minimum distance between the robot and obstacles, enhancing obstacle avoidance. Set in `nav2_params.yaml`.
-- **Tolerance**: Determines how close the robot should reach a goal before considering it achieved, allowing more flexibility around goal points. Also set in `nav2_params.yaml`.
-
-## Technical Concepts
-
-### Inflation Radius
-
-The **inflation radius** is a buffer around obstacles in the costmap. A higher inflation radius increases the buffer, which is useful in tight spaces. This value is particularly important for wall-following, as it prevents the robot from getting too close to walls.
-
-### Tolerance
-
-Tolerance is the allowable range around a goal position that the robot can achieve to consider the goal reached. A larger tolerance might be required for loose accuracy, while smaller tolerances require higher precision.
-
-## Usage
-
-### Launch Wall-Following
-
-```bash
-ros2 launch wall_follower wall_follower.launch.py
-```
-
-### Launch Marker Detection and Navigation
-
-```bash
-ros2 launch marker_navigator marker_navigator.launch.py
-```
-
-### Setting Initial Pose in Rviz
-
-Open Rviz, enable the “2D Pose Estimate” tool, and click the robot’s approximate location on the map to set the initial pose manually.
-
-## Troubleshooting
-
-- **AMCL Errors**: Check initial pose configuration if the robot's localization is inconsistent.
-- **Sensor Origin Errors**: If errors mention the sensor origin out of bounds, verify costmap configurations.
-- **Nav2 Timeout**: If Nav2 navigation goals fail, ensure the Nav2 server is fully initialized before sending goals.
-
-## Contributing
-
-Contributions are welcome! Feel free to submit a pull request with improvements, fixes, or additional features.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
+--- 
